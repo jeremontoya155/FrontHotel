@@ -1,0 +1,86 @@
+/* Estilos comunes para todos los enlaces */
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2.7px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  color: var(--color-darkslategray);
+  min-width: 3.688rem;
+}
+
+/* Otros estilos existentes */
+.logo-img {
+  height: 5.875rem;
+  width: 14.813rem;
+  position: relative;
+  object-fit: cover;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+  margin-right: 2rem;
+}
+
+.navigation .nav-link:hover {
+  cursor: pointer;
+  color: var(--color-chocolate);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 0 var(--padding-xs);
+  width: 100%;
+  position: fixed; /* Cambiar a fixed */
+  top: 0; /* Fijar en la parte superior */
+  left: 0; /* Alinear a la izquierda */
+  right: 0; /* Alinear a la derecha */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  border-radius: 0 0 var(--br-mini) var(--br-mini);
+  background-color: var(--color-white);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 var(--padding-smi) 0 0;
+  line-height: normal;
+  letter-spacing: normal;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--subheading-size);
+  font-family: var(--m3-label-large-prominent);
+}
+
+.navigation-wrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-18xl) 0 0;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 725px) {
+  .root {
+    flex-wrap: wrap;
+    padding-left: var(--padding-smi);
+    padding-top: var(--padding-smi);
+    padding-bottom: var(--padding-smi);
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-link {
+    font-size: var(--font-size-base);
+    line-height: 1rem;
+  }
+  .navigation {
+    flex-wrap: wrap;
+  }
+}

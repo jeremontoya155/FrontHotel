@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,56 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --heading: 'Roboto', sans-serif;
+  --m3-label-large-prominent: 'Roboto', sans-serif;
+  --font-poppins: 'Roboto', sans-serif;
+
+  /* font sizes */
+  --heading-size: 1.5rem;
+  --font-size-lgi: 1.188rem;
+  --font-size-7xl: 1.625rem;
+  --font-size-2xl: 1.313rem;
+  --subheading-size: 1.25rem;
+  --font-size-base: 1rem;
+  --m3-label-large-prominent-size: 0.875rem;
+  --title-hero-size: 4.5rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-whitesmoke: #eee;
+  --color-black: #000;
+  --color-dimgray: #686d76;
+  --color-chocolate: #dc5f00;
+  --color-darkslategray: #373a40;
+
+  /* Gaps */
+  --gap-xl: 1.25rem;
+  --gap-2xs: 0.687rem;
+
+  /* Paddings */
+  --padding-31xl: 3.125rem;
+  --padding-39xl: 3.625rem;
+  --padding-5xl: 1.5rem;
+  --padding-xs: 0.75rem;
+  --padding-xl: 1.25rem;
+  --padding-54xl: 4.562rem;
+  --padding-17xl: 2.25rem;
+  --padding-3xs: 0.625rem;
+  --padding-2xl: 1.312rem;
+  --padding-sm: 0.875rem;
+  --padding-4xs: 0.562rem;
+
+  /* Border radiuses */
+  --br-sm: 14px;
+  --br-mini: 15px;
+  --br-9xl: 28px;
 }
