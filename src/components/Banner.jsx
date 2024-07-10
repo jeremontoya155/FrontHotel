@@ -17,7 +17,7 @@ const Banner = () => {
         <div class="rental-options">
           <div class="somos-la-opcin-container">
             <span class="somos-la-opcin"
-            >Somos la opción Nro 1 de Alquileres Temporarios, por día, por
+            >Somos la opción Nro 2 de Alquileres Temporarios, por día, por
               semana o meses, en cualquiera de nuestras localizaciones y en
               diferentes ciudades</span
             >
