@@ -17,20 +17,19 @@ body {
 
 :root {
   /* fonts */
-<<<<<<< HEAD
+
   --heading: 'Roboto', sans-serif;
   --m3-label-large-prominent: 'Roboto', sans-serif;
   --font-poppins: 'Roboto', sans-serif;
-=======
+
   --title-page: Roboto;
   --m3-label-large-prominent: Roboto;
   --font-poppins: Poppins;
->>>>>>> 09e75ab43f5ffa1fdd0dcae933d5cc38652e3921
 
   /* font sizes */
   --heading-size: 1.5rem;
   --font-size-lgi: 1.188rem;
-<<<<<<< HEAD
+
   --font-size-7xl: 1.625rem;
   --font-size-2xl: 1.313rem;
   --subheading-size: 1.25rem;
@@ -45,7 +44,7 @@ body {
   --color-dimgray: #686d76;
   --color-chocolate: #dc5f00;
   --color-darkslategray: #373a40;
-=======
+
   --font-size-2xl: 1.313rem;
   --font-size-7xl: 1.625rem;
   --font-size-base: 1rem;
@@ -64,12 +63,12 @@ body {
   --color-black: #000;
   --color-white: #fff;
   --color-whitesmoke: #eee;
->>>>>>> 09e75ab43f5ffa1fdd0dcae933d5cc38652e3921
+
 
   /* Gaps */
   --gap-xl: 1.25rem;
   --gap-2xs: 0.687rem;
-<<<<<<< HEAD
+
 
   /* Paddings */
   --padding-31xl: 3.125rem;
@@ -88,7 +87,7 @@ body {
   --br-sm: 14px;
   --br-mini: 15px;
   --br-9xl: 28px;
-=======
+
   --gap-mid: 1.062rem;
   --gap-lgi: 1.187rem;
   --gap-5xs: 0.5rem;
@@ -145,5 +144,5 @@ body {
   --br-101xl: 120px;
   --br-81xl: 100px;
   --br-17xl: 36px;
->>>>>>> 09e75ab43f5ffa1fdd0dcae933d5cc38652e3921
+
 }
