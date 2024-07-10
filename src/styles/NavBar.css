@@ -61,7 +61,6 @@
 .navigation-wrapper {
   flex-direction: column;
   justify-content: flex-start;
-  padding: var(--padding-18xl) 0 0;
   max-width: 100%;
 }
 

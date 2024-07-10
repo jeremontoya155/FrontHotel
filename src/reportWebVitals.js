@@ -1,14 +1,13 @@
+import { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } from 'web-vitals';
 
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-
-const reportWebVitals = (onPerfEntry) => {
+const reportWebVitals = onPerfEntry => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     onCLS(onPerfEntry);
     onFID(onPerfEntry);
-    onFCP(onPerfEntry);
     onLCP(onPerfEntry);
+    onFCP(onPerfEntry);
     onTTFB(onPerfEntry);
+    onINP(onPerfEntry);
   }
 };
 

@@ -26,7 +26,7 @@ const SearchBar = () => {
         placeholder="Huéspedes"
         className="search-bar__input search-bar__input-huesp"
       />
-      <button className="search-bar__button">Buscarrr</button>
+      <button className="search-bar__button">Buscar</button>
       <button className="search-bar__settings">
         <FaSlidersH />
       </button>

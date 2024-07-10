@@ -1,5 +1,6 @@
 import React from 'react';
 import img_banner from '../images/baner.png';
+import img_section from '../images/sectionimg.jpg';
 import '../styles/Banner.css';
 import SearchBar from './SearchBar';
 
@@ -12,32 +13,29 @@ const Banner = () => {
           <h1>Encontrá tu <br /> departamento ideal <br /> junto a TemporariosNYC</h1>
         </div>
       </div>
-        <SearchBar />
-      <div class="banner1">
-        <div class="rental-options">
-          <div class="somos-la-opcin-container">
-            <span class="somos-la-opcin"
-            >Somos la opción Nro 2 de Alquileres Temporarios, por día, por
-              semana o meses, en cualquiera de nuestras localizaciones y en
-              diferentes ciudades</span
-            >
-            <span class="span">.</span>
-          </div>
-          <div class="encontra-tu-departamento-ideal">
-            <b class="temporarios-nyc">
-              <p class="temporarios-nyc1">Temporarios NYC</p>
-              <p class="alquileres-temporarios">ALQUILERES TEMPORARIOS</p>
+      <SearchBar />
+      <div className="section">
+        <div className="rental-options">
+          <div className="encontra-tu-departamento-ideal">
+            <b className="temporarios-nyc">
+              <p className="temporarios-nyc1">Temporarios NYC</p>
+              <p className="alquileres-temporarios">ALQUILERES TEMPORARIOS</p>
             </b>
+            <span className="somos-la-opcin-container">
+              Somos la opción Nro 1 de Alquileres Temporarios, por día, por
+              semana o meses, en cualquiera de nuestras localizaciones y en
+              diferentes ciudades.
+            </span>
           </div>
-          <b class="viv-la-experiencia">Viví la experiencia...</b>
+          <b className="viv-la-experiencia">Viví la experiencia...</b>
         </div>
-        <div class="wrapper-whatsapp-image-2024-07-wrapper">
-          <div class="wrapper-whatsapp-image-2024-07">
+        <div className="section-img-wrapper">
+          <div className="wrapper-section-img">
             <img
-              class="whatsapp-image-2024-07-02-at-1"
+              className="section-img-02-at-1"
               loading="lazy"
               alt=""
-              src={img_banner}
+              src={img_section}
             />
           </div>
         </div>
