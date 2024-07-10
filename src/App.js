@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import HotelCatalog from './components/HotelCatalog';
 import Banner from './components/Banner';
+import SearchBar from './components/SearchBar.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <main>
         <Banner />
+        <SearchBar />
         <HotelCatalog />
       </main>
       <footer>
