@@ -1,4 +1,3 @@
-// HotelCatalog.js
 import React, { useEffect, useState } from 'react';
 import './HotelCatalog.css';
 import WhatsAppLink from './WhatsAppLink'; // Ajusta la ruta según tu estructura
@@ -25,8 +24,20 @@ const HotelCatalog = () => {
             <p>Precio: ${hotel.precio}</p>
             <p>Datos: {hotel.datos}</p>
             <p>Cochera: {hotel.cochera ? 'Sí' : 'No'}</p>
-            <p>Link a Booking: <a href={hotel.link_booking} target="_blank" rel="noopener noreferrer">Reservar</a></p>
-            <p>Link a Maps: <a href={hotel.link_maps} target="_blank" rel="noopener noreferrer">Ubicación</a></p>
+            <p>Link a Booking: 
+              {hotel.link_booking ? (
+                <a href={hotel.link_booking} target="_blank" rel="noopener noreferrer">Reservar</a>
+              ) : (
+                'No disponible'
+              )}
+            </p>
+            <p>Link a Maps: 
+              {hotel.link_maps ? (
+                <a href={hotel.link_maps} target="_blank" rel="noopener noreferrer">Ubicación</a>
+              ) : (
+                'No disponible'
+              )}
+            </p>
             {hotel.wsp && 
               <p>
                 <WhatsAppLink phoneNumber={hotel.wsp} />
