@@ -60,17 +60,19 @@
 
 .temporarios-nyc1 {
   margin: 0;
+  filter: drop-shadow(1.2px 1.2px 1.2px rgba(74, 74, 74, 0.8));
 }
 .alquileres-temporarios {
   margin: 0;
   font-size:  var(--font-size-2xl);
   color: var(--color-dimgray);
+  
 }
 .temporarios-nyc {
   position: relative;
   letter-spacing: -0.02em;
   line-height: 146%;
-  filter: drop-shadow(1.7px 1.7px 1.73px rgba(255, 255, 255, 0.8));
+  
 }
 
 .encontra-tu-departamento-ideal {
@@ -93,7 +95,6 @@
 .rental-options {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
   position: relative;
   gap: 6.425rem;
