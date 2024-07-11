@@ -10,7 +10,7 @@ const Destinos = () => {
                 <div className="property-highlights">
                     <div className="destinos">
                         <h3 className="tu-destino">
-                            Tenemos todos estos destinos para vos
+                            TENEMOS TODOS ESTOS DESTINOS PARA VOS
                         </h3>
                     </div>
                 </div>
