@@ -3,7 +3,6 @@ import './App.css';
 import HotelCatalog from './components/HotelCatalog';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
-
 import Destinos from './components/Destinos';
 
 function App() {

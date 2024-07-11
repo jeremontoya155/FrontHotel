@@ -29,6 +29,14 @@ const HotelCatalog = () => {
     return <div>No se encontraron hoteles disponibles.</div>;
   }
 
+  const handleReservarClick = (link) => {
+    window.open(link, '_blank');
+  };
+
+  const handleUbicacionClick = (link) => {
+    window.open(link, '_blank');
+  };
+
   return (
     <div>
       <h1>Lista de Hoteles</h1>
@@ -41,20 +49,12 @@ const HotelCatalog = () => {
             <p>Precio: ${hotel.precio}</p>
             <p>Datos: {hotel.datos}</p>
             <p>Cochera: {hotel.cochera ? 'Sí' : 'No'}</p>
-            <p>Link a Booking: 
-              {hotel.link_booking ? (
-                <a href={hotel.link_booking} target="_blank" rel="noopener noreferrer">Reservar</a>
-              ) : (
-                'No disponible'
-              )}
-            </p>
-            <p>Link a Maps: 
-              {hotel.link_maps ? (
-                <a href={hotel.link_maps} target="_blank" rel="noopener noreferrer">Ubicación</a>
-              ) : (
-                'No disponible'
-              )}
-            </p>
+            <button onClick={() => handleReservarClick(hotel.link_booking)}>
+              {hotel.link_booking ? 'Reservar' : 'No disponible'}
+            </button>
+            <button onClick={() => handleUbicacionClick(hotel.link_maps)}>
+              {hotel.link_maps ? 'Ubicación' : 'No disponible'}
+            </button>
             {hotel.wsp && 
               <p>
                 <WhatsAppLink phoneNumber={hotel.wsp} />
@@ -71,4 +71,3 @@ const HotelCatalog = () => {
 }
 
 export default HotelCatalog;
-
