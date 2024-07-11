@@ -3,7 +3,7 @@ import './App.css';
 import HotelCatalog from './components/HotelCatalog';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+
 import Destinos from './components/Destinos';
 
 function App() {
@@ -15,9 +15,7 @@ function App() {
         <Destinos />
         <HotelCatalog />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+     
     </div>
   );
 }
