@@ -14,12 +14,18 @@
     width: 6rem;
 }
 
+.search-bar__date-container label {
+    margin-left: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .search-bar__input,
 .search-bar__date {
     border: 1px solid #dc5f00;
     border-radius: 10px;
     padding: 14px;
-    height: 30px;
     margin-right: 10px;
     font-size: 1rem;
     outline: none;
@@ -41,16 +47,19 @@
     background-color: #dc5f00;
     color: white;
     border: none;
-    height: 59.33px;
+    height: 49px;
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     margin-right: 10px;
+    margin-top: 19px;
 }
 
 .search-bar__settings {
-    height: 59.33px;
+    margin-right: 10px;
+    margin-top: 19px;
+    height: 49px;
     aspect-ratio: 1/1;
     background-color: white;
     border: 1px solid #dc5f00;
