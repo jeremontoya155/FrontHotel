@@ -30,11 +30,19 @@ const HotelCatalog = () => {
   }
 
   const handleReservarClick = (link) => {
-    window.open(link, '_blank');
+    if (link) {
+      window.open(link, '_blank');
+    } else {
+      alert('Enlace de reserva no disponible');
+    }
   };
 
   const handleUbicacionClick = (link) => {
-    window.open(link, '_blank');
+    if (link) {
+      window.open(link, '_blank');
+    } else {
+      alert('Enlace de ubicación no disponible');
+    }
   };
 
   return (
