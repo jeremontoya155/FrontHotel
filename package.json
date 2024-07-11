@@ -39,7 +39,6 @@
   },
   "proxy": "https://backhotel-production.up.railway.app/",
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
-    "vite": "^5.3.3"
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7"
   }
 }
