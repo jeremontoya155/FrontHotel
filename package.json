@@ -2,8 +2,17 @@
   "name": "hotel-catalog",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
-  "proxy": "http://localhost:4000/",
+  "dependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "package.json": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "^5.0.1",
+    "serve": "^14.2.3",
+    "web-vitals": "^4.2.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,6 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://localhost:4000/",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7"
   }
 }
-
