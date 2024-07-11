@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4",
+    "http-proxy-middleware": "^2.0.6",
     "package.json": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -12,8 +13,7 @@
     "react-router-dom": "^6.24.1",
     "react-scripts": "^5.0.1",
     "serve": "^14.2.3",
-    "web-vitals": "^4.2.1",
-    "http-proxy-middleware": "^2.0.6"
+    "web-vitals": "^4.2.1"
   },
   "scripts": {
     "start": "cross-env PORT=$REACT_APP_PORT craco start",
@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.2.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
+    "@craco/craco": "^7.1.0",
+    "cross-env": "^7.0.3"
   }
 }
