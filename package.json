@@ -1,6 +1,7 @@
 {
   "name": "hotel-catalog",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4",
