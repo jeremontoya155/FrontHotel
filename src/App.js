@@ -5,6 +5,8 @@ import Banner from './components/Banner';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Destinos from './components/Destinos';
+import HotelCatalog from './components/HotelCatalog';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <main>
         <Banner />
         <Destinos />
+        <HotelCatalog />
       </main>
       <footer>
         <Footer />
