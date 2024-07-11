@@ -4,13 +4,30 @@ import WhatsAppLink from './WhatsAppLink'; // Ajusta la ruta según tu estructur
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('/api/hoteles')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
       .then(data => setHoteles(data))
-      .catch(error => console.error('Error fetching hoteles:', error));
+      .catch(error => {
+        console.error('Error fetching hoteles:', error);
+        setError(error.message);
+      });
   }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (hoteles.length === 0) {
+    return <div>No se encontraron hoteles disponibles.</div>;
+  }
 
   return (
     <div>
@@ -54,3 +71,4 @@ const HotelCatalog = () => {
 }
 
 export default HotelCatalog;
+
