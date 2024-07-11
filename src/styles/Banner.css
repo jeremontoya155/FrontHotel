@@ -104,6 +104,7 @@
 }
 
 .section-img-02-at-1 {
+  box-shadow: 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
   align-self: stretch;
   height: 514px;
   margin: 0 3rem;
