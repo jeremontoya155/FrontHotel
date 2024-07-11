@@ -1,7 +1,6 @@
 // App.js
 import React from 'react';
 import './App.css';
-import HotelCatalog from './components/HotelCatalog';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -14,7 +13,6 @@ function App() {
       <main>
         <Banner />
         <Destinos />
-        <HotelCatalog />
       </main>
       <footer>
         <Footer />

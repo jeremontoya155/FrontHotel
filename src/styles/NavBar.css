@@ -1,5 +1,6 @@
 /* Estilos comunes para todos los enlaces */
 .nav-link {
+  font-size: 1.2rem;
   text-decoration: none;
   position: relative;
   letter-spacing: 0.1px;
@@ -13,7 +14,7 @@
 
 /* Otros estilos existentes */
 .logo-img {
-  height: 5.875rem;
+  height: 5.275rem;
   width: 14.813rem;
   position: relative;
   object-fit: cover;
@@ -25,7 +26,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-xl);
-  margin-right: 2rem;
+  margin-right: 0.5rem;
 }
 
 .navigation .nav-link:hover {
