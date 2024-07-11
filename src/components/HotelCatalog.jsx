@@ -4,22 +4,31 @@ import WhatsAppLink from './WhatsAppLink'; // Ajusta la ruta según tu estructur
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/api/hoteles')
+    fetch('https://backhotel-production-c839.up.railway.app/api/hoteles')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
         }
         return response.json();
       })
-      .then(data => setHoteles(data))
+      .then(data => {
+        setHoteles(data);
+        setLoading(false);
+      })
       .catch(error => {
         console.error('Error fetching hoteles:', error);
         setError(error.message);
+        setLoading(false);
       });
   }, []);
+
+  if (loading) {
+    return <div>Cargando hoteles...</div>;
+  }
 
   if (error) {
     return <div>Error: {error}</div>;
