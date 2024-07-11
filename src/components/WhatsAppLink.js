@@ -1,4 +1,3 @@
-// WhatsAppLink.js
 import React from 'react';
 import './WhatsAppLink.css'; // Ajusta la ruta según tu estructura
 
