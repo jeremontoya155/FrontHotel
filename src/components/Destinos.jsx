@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img_bsas from '../images/image-2@2x.png';
 import img_cba from '../images/image-3@2x.png';
 import img_ag from '../images/image-4@2x.png';
@@ -139,11 +140,11 @@ const Destinos = () => {
                 </div>
             </section>
 
-            <div className="action">
-                <div className="view-more-button">
+           <div className="action">
+                <Link to="/hotels" className="view-more-button">
                     <div className="view-more-button-child"></div>
                     <div className="ver-mas">Ver Más</div>
-                </div>
+                </Link>
             </div>
         </div>
     );

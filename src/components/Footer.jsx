@@ -26,6 +26,8 @@ const Footer = () => {
                         src={logo_byn}
                     />
                 </div>
+
+                
             </section>
         </div>
     )
