@@ -23,6 +23,7 @@ function App() {
             } />
             <Route path="/hotels" element={<HotelCatalog />} />
           </Routes>
+          <HotelCatalog/>
         </main>
         <footer>
           <Footer />
