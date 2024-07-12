@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './HotelCatalog.css';
-import WhatsAppLink from './WhatsAppLink'; // Ajusta la ruta según tu estructura
+import WhatsAppLink from './WhatsAppLink';
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
@@ -8,7 +8,7 @@ const HotelCatalog = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://backhotel-production-c839.up.railway.app/api/hoteles')
+    fetch(`${process.env.REACT_APP_API_URL}/api/hoteles`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
@@ -88,3 +88,4 @@ const HotelCatalog = () => {
 }
 
 export default HotelCatalog;
+

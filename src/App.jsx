@@ -21,9 +21,8 @@ function App() {
                 <Destinos />
               </>
             } />
-            <Route path="/hotels" element={<HotelCatalog />} />
+            <Route path="/hotels" element={<HotelCatalog/>} />
           </Routes>
-          <HotelCatalog/>
         </main>
         <footer>
           <Footer />
