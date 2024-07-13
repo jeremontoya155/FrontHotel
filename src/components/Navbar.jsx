@@ -14,7 +14,7 @@ const Navbar = () => {
       />
 
       <div className="navigation-wrapper">
-        <div className="navigation">
+        <div className="navigation"> 
           <Link className="nav-link" to='/'>INICIO</Link>
           <Link className="nav-link" to='/hotels'>HOSPEDAJES</Link>
           <Link className="nav-link" to='/'>NOSOTROS</Link>
