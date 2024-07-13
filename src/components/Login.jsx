@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
-import './Login.css'; // Importa los estilos CSS aquí
+import './Login.css';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -14,7 +14,7 @@ const Login = ({ onLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/login', { username, password });
+      const response = await axios.post('https://your-api-domain.com/api/login', { username, password });
       if (response.data.message === 'Login successful') {
         localStorage.setItem('isLoggedIn', 'true');
         setIsLoggedIn(true);
