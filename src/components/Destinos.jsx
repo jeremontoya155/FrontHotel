@@ -146,6 +146,12 @@ const Destinos = () => {
                     <div className="ver-mas">Ver Más</div>
                 </Link>
             </div>
+            <div className="action">
+                <Link to="/hotels" className="view-more-button">
+                    <div className="view-more-button-child"></div>
+                    <div className="ver-mas">Edicion</div>
+                </Link>
+            </div>
         </div>
     );
 };
