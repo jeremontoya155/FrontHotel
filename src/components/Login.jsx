@@ -16,7 +16,7 @@ const Login = ({ onLogin }) => {
       const response = await axios.post('/api/login', { username, password });
       console.log('Respuesta del servidor:', response.data);
       if (response.data.message === 'Login successful') {
-        onLogin(); // Llama a la función de inicio de sesión proporcionada por el componente padre
+       // Llama a la función de inicio de sesión proporcionada por el componente padre
         // Redirige al usuario a la página de gestión de hoteles
         navigate('/hotel-management');
       } else {
