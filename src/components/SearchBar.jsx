@@ -33,7 +33,7 @@ const SearchBar = () => {
           className="search-bar__input search-bar__input-dest"
         />
       </div>
-      <div className="search-bar__dates">
+      {/* <div className="search-bar__dates">
         <div className="search-bar__date-container">
           <label htmlFor="start-date">Fecha de Llegada</label>
           <input
@@ -56,6 +56,20 @@ const SearchBar = () => {
             className="search-bar__date"
           />
         </div>
+      </div> */}
+      <div className="search-bar__date-container">
+        <label>Huespedes</label>
+        <select
+          id="guests"
+          value={guests}
+          onChange={handleGuestsChange}
+          className="search-bar__input search-bar__input-huesp"
+        >
+          {[...Array(8).keys()].map(i => (
+            <option key={i + 1} value={i + 1}>{i + 1}</option>
+          ))}
+        </select>
+        
       </div>
       <div className="search-bar__date-container">
         <label>Huespedes</label>
@@ -69,6 +83,7 @@ const SearchBar = () => {
             <option key={i + 1} value={i + 1}>{i + 1}</option>
           ))}
         </select>
+        
       </div>
       <div className="search-bar__date-container">
 

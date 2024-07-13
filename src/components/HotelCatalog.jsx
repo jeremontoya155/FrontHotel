@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './HotelCatalog.css';
 import WhatsAppLink from './WhatsAppLink';
+import HotelCard from './HotelCard';
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
@@ -55,11 +56,18 @@ const HotelCatalog = () => {
   };
 
   return (
-    <div>
+    <div className="hospedajes">
       <h1>Lista de Hoteles</h1>
-      <div className="hoteles-container">
+      <div className="hotel-catalog">
         {hoteles.map(hotel => (
-          <div key={hotel.id} className="hotel-card">
+          <HotelCard hotel={hotel} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+          {/* <div key={hotel.id} className="hotel-card">
             <h2>{hotel.tipo_alojamiento}</h2>
             <p>Ubicación: {hotel.ubicacion}</p>
             <p>Disponibilidad: {hotel.disponibilidad ? 'Disponible' : 'No Disponible'}</p>
@@ -80,12 +88,6 @@ const HotelCatalog = () => {
             {hotel.imagen_principal_1 && <img src={hotel.imagen_principal_1} alt="Imagen 1" style={{maxWidth: '200px'}} />}
             {hotel.imagen_principal_2 && <img src={hotel.imagen_principal_2} alt="Imagen 2" style={{maxWidth: '200px'}} />}
             {hotel.imagen_principal_3 && <img src={hotel.imagen_principal_3} alt="Imagen 3" style={{maxWidth: '200px'}} />}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
+          </div> */}
 export default HotelCatalog;
 
