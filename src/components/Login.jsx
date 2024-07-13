@@ -31,7 +31,7 @@ const Login = ({ onLogin }) => {
   return (
     <div className="main-container">
       <div className="form-container">
-        <h2>Iniciar sesión</h2>
+        <h2>Inicio de sesión</h2>
         {loginError && <div className="error-message">{loginError}</div>}
         <form onSubmit={handleLogin}>
           <div className="form-group">
