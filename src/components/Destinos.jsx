@@ -147,7 +147,7 @@ const Destinos = () => {
                 </Link>
             </div>
             <div className="action">
-                <Link to="/hotels" className="view-more-button">
+                <Link to="/hotel-management" className="view-more-button">
                     <div className="view-more-button-child"></div>
                     <div className="ver-mas">Edicion</div>
                 </Link>
