@@ -1,14 +1,13 @@
-// Login.jsx
-
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Importa los estilos CSS aquí
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const navigate = useNavigate(); // Utiliza useNavigate para la redirección
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,7 +18,7 @@ const Login = ({ onLogin }) => {
       if (response.data.message === 'Login successful') {
         onLogin(); // Llama a la función de inicio de sesión proporcionada por el componente padre
         // Redirige al usuario a la página de gestión de hoteles
-        return <Navigate to="/hotel-management" />;
+        navigate('/hotel-management');
       } else {
         setLoginError('Credenciales inválidas');
       }
