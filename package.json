@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4",
+    "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "http-proxy-middleware": "^2.0.6",
     "package.json": "^2.0.1",
