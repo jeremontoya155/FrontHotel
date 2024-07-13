@@ -1,24 +1,23 @@
-// Login.jsx
-
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Nuevo estado para manejar la autenticación
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log('Intentando iniciar sesión con:', username, password);
     try {
-      const response = await axios.post('https://your-api-domain.com/api/login', { username, password });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/login`, { username, password });
+      console.log('Respuesta del servidor:', response.data);
       if (response.data.message === 'Login successful') {
-        localStorage.setItem('isLoggedIn', 'true');
-        setIsLoggedIn(true);
-        onLogin();
+        onLogin(); // Llama a la función de inicio de sesión proporcionada por el componente padre
+        setIsAuthenticated(true); // Actualiza el estado de autenticación
       } else {
         setLoginError('Credenciales inválidas');
       }
@@ -28,7 +27,8 @@ const Login = ({ onLogin }) => {
     }
   };
 
-  if (isLoggedIn) {
+  // Si está autenticado, redirige a /hotel-management
+  if (isAuthenticated) {
     return <Navigate to="/hotel-management" />;
   }
 
