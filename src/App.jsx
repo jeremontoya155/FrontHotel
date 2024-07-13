@@ -1,6 +1,6 @@
 // App.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Banner from './components/Banner';
@@ -9,16 +9,22 @@ import Footer from './components/Footer';
 import Destinos from './components/Destinos';
 import HotelCatalog from './components/HotelCatalog';
 import Login from './components/Login';
-import HotelManagement from './components/HotelManagement'; // Importa el componente de gestión de hoteles
+import HotelManagement from './components/HotelManagement';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    setIsLoggedIn(loggedIn);
+  }, []);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
 
   const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
   };
 
@@ -36,8 +42,7 @@ function App() {
             } />
             <Route path="/hotels" element={<HotelCatalog />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
-            {/* Ruta protegida para la gestión de hoteles */}
-            <Route path="/hotel-management" element={<HotelManagement/>} />
+            <Route path="/hotel-management" element={isLoggedIn ? <HotelManagement /> : <Navigate to="/login" />} />
           </Routes>
         </main>
         <footer>
