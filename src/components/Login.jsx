@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Nuevo estado para manejar la autenticación
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
