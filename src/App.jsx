@@ -8,6 +8,7 @@ import Destinos from './components/Destinos';
 import HotelCatalog from './components/HotelCatalog';
 import Login from './components/Login';
 import HotelManagement from './components/HotelManagement'; // Importa el componente de gestión de hoteles
+import Nosotros from './components/Nosotros';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -27,12 +28,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={
-              <>
+              <>  
                 <Banner />
                 <Destinos />
               </>
             } />
-            <Route path="/hotels" element={<HotelCatalog />} />
+            <Route path="/hospedajes" element={<HotelCatalog />} />
+            <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             {/* Ruta protegida para la gestión de hoteles */}
             <Route path="/hotel-management" element={<HotelManagement/>} />

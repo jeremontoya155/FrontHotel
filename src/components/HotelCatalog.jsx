@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './HotelCatalog.css';
 import WhatsAppLink from './WhatsAppLink';
 import HotelCard from './HotelCard';
 
