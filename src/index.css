@@ -5,6 +5,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --scrollbar-width: 0.3em;
+  --scrollbar-color: var(--color-chocolate);
+}
+
+/* WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width); /* Para scrollbar horizontal */
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 26px var(--scrollbar-color);
+  background: transparent;
+  border-radius: 10px; /* Redondear los bordes de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 10px; /* Redondear los bordes del pulgar */
+  border: 3px solid transparent; /* Espacio alrededor del pulgar */
+  background-clip: content-box;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

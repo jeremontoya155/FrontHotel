@@ -46,6 +46,7 @@
     color: white;
     padding: 1rem;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .view-more-button:hover {
@@ -56,6 +57,7 @@
 
 .ver-mas {
     font-weight: 600;
+    text-decoration: none;
 }
 
 .location-names {

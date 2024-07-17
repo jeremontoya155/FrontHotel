@@ -6,25 +6,14 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Destinos from './components/Destinos';
 import HotelCatalog from './components/HotelCatalog';
-import Login from './components/Login';
-import HotelManagement from './components/HotelManagement'; // Importa el componente de gestión de hoteles
 import Nosotros from './components/Nosotros';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
 
   return (
     <Router>
       <div className="App">
-        <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+        <Navbar  />
         <main>
           <Routes>
             <Route path="/" element={
@@ -35,9 +24,6 @@ function App() {
             } />
             <Route path="/hospedajes" element={<HotelCatalog />} />
             <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/login" element={<Login onLogin={handleLogin} />} />
-            {/* Ruta protegida para la gestión de hoteles */}
-            <Route path="/hotel-management" element={<HotelManagement/>} />
           </Routes>
         </main>
         <footer>

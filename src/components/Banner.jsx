@@ -1,10 +1,15 @@
 import React from 'react';
 import img_banner from '../images/baner.png';
 import img_section from '../images/sectionimg.jpg';
+import flecha from '../images/icons-arrow.png';
 import '../styles/Banner.css';
 import SearchBar from './SearchBar';
 
 const Banner = () => {
+  const scrollToSection = () => {
+    document.getElementById('flecha').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
       <div className="banner" style={{ backgroundImage: `url(${img_banner})` }}>
@@ -12,7 +17,9 @@ const Banner = () => {
         <div className="banner-content">
           <h1>Encontrá tu <br /> departamento ideal <br /> junto a TemporariosNYC</h1>
         </div>
+        <img src={flecha} alt="flecha" className='banner-flecha' onClick={scrollToSection} id="flecha" />
       </div>
+      <div></div>
       <SearchBar />
       <div className="section">
         <div className="rental-options">
@@ -32,7 +39,7 @@ const Banner = () => {
         <div className="section-img-wrapper">
           <div className="wrapper-section-img">
             <img
-              className="section-img-02-at-1"
+              className="img-sec"
               loading="lazy"
               alt=""
               src={img_section}
