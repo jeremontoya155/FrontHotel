@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import WhatsAppLink from './WhatsAppLink';
 import HotelCard from './HotelCard';
+import SearchBar from './SearchBar';
+
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
@@ -27,7 +29,7 @@ const HotelCatalog = () => {
   }, []);
 
   if (loading) {
-    return <div>Cargando hoteles...</div>;
+    return <div className='loading'>Cargando hoteles...</div>;
   }
 
   if (error) {
@@ -55,7 +57,10 @@ const HotelCatalog = () => {
   };
 
   return (
+    
     <div className="hospedajes">
+      <SearchBar />
+
       <h1>Lista de Hoteles</h1>
       <div className="hotel-catalog">
         {hoteles.map(hotel => (

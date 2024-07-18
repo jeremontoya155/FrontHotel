@@ -1,7 +1,9 @@
 .hospedajes {
     margin-top: 3rem;
 }
-
+.loading {
+    margin-top: 10rem;
+}
 
 .hotel-catalog {
     display: flex;
