@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import WhatsAppLink from './WhatsAppLink';
 import HotelCard from './HotelCard';
 import SearchBar from './SearchBar';
-
+import { ClipLoader } from 'react-spinners'; // Importar el spinner
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
@@ -29,7 +29,12 @@ const HotelCatalog = () => {
   }, []);
 
   if (loading) {
-    return <div className='loading'>Cargando hoteles...</div>;
+    return (
+      <div className='loading'>
+        <ClipLoader size={150} color={"#dc5f00"} loading={loading} />
+        <p>Cargando hospedajes...</p>
+      </div>
+    );
   }
 
   if (error) {
@@ -57,41 +62,16 @@ const HotelCatalog = () => {
   };
 
   return (
-    
     <div className="hospedajes">
       <SearchBar />
-
-      <h1>Lista de Hoteles</h1>
+      <h1>Lista de Hospedajes</h1>
       <div className="hotel-catalog">
         {hoteles.map(hotel => (
-          <HotelCard hotel={hotel} />
+          <HotelCard key={hotel.id} hotel={hotel} />
         ))}
       </div>
     </div>
   );
 }
 
-          {/* <div key={hotel.id} className="hotel-card">
-            <h2>{hotel.tipo_alojamiento}</h2>
-            <p>Ubicación: {hotel.ubicacion}</p>
-            <p>Disponibilidad: {hotel.disponibilidad ? 'Disponible' : 'No Disponible'}</p>
-            <p>Precio: ${hotel.precio}</p>
-            <p>Datos: {hotel.datos}</p>
-            <p>Cochera: {hotel.cochera ? 'Sí' : 'No'}</p>
-            <button onClick={() => handleReservarClick(hotel.link_booking)}>
-              {hotel.link_booking ? 'Reservar' : 'No disponible'}
-            </button>
-            <button onClick={() => handleUbicacionClick(hotel.link_maps)}>
-              {hotel.link_maps ? 'Ubicación' : 'No disponible'}
-            </button>
-            {hotel.wsp && 
-              <p>
-                <WhatsAppLink phoneNumber={hotel.wsp} />
-              </p>
-            }
-            {hotel.imagen_principal_1 && <img src={hotel.imagen_principal_1} alt="Imagen 1" style={{maxWidth: '200px'}} />}
-            {hotel.imagen_principal_2 && <img src={hotel.imagen_principal_2} alt="Imagen 2" style={{maxWidth: '200px'}} />}
-            {hotel.imagen_principal_3 && <img src={hotel.imagen_principal_3} alt="Imagen 3" style={{maxWidth: '200px'}} />}
-          </div> */}
 export default HotelCatalog;
-

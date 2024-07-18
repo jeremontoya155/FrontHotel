@@ -1,0 +1,23 @@
+.hospedajes {
+  margin-top: 3rem;
+  max-width: 1600px;
+  margin: 3rem auto; /* Centrar el contenedor horizontalmente */
+  padding: 0 20px; /* Añadir padding para asegurar que el contenido no toque los bordes */
+}
+
+.loading {
+  margin-top: 10rem;
+  text-align: center; /* Centrar el texto de carga */
+}
+
+.hotel-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem 2rem;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center; /* Centrar el título */
+}

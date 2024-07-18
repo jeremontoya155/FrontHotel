@@ -11,7 +11,7 @@ const HotelCard = ({ hotel }) => {
                 <div className="hotel-card__content">
                     <div>
                     <h2 className="hotel-card__title">{hotel.nombre}</h2>
-                    <h3 className="hotel-card__location">{hotel.localidad}{hotel.pais}</h3>
+                    <h3 className="hotel-card__location">{hotel.localidad}, {hotel.pais}</h3>
                     </div>
                     <ul className="hotel-card__details">
                         <li>
