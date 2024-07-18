@@ -1,0 +1,125 @@
+.hotel-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hotel-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hotel-title {
+  font-size: 2rem;
+  color: #333;
+  display: flex;
+}
+
+.hotel-location {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.hotel-price {
+  font-size: 1.5rem;
+  color: #dc5f00;
+}
+
+.hotel-images {
+  display: flex;
+  gap: 10px;
+}
+
+.hotel-main-image {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hotel-secondary-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+}
+
+.hotel-secondary-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hotel-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hotel-info {
+  width: 100%;
+}
+
+.hotel-services,
+.hotel-description,
+.hotel-rating,
+.hotel-map,
+.hotel-prices,
+.hotel-reservation {
+  margin-bottom: 20px;
+}
+
+.hotel-services h3,
+.hotel-description h3,
+.hotel-rating h3,
+.hotel-map h3,
+.hotel-prices h3,
+.hotel-reservation h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.hotel-map iframe {
+  border: 0;
+  border-radius: 10px;
+}
+
+.reservation-button {
+  background-color: #dc5f00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reservation-button:hover {
+  background-color: #b44d00;
+}
+
+@media screen and (max-width: 768px) {
+  .hotel-images {
+    flex-direction: column;
+  }
+
+  .hotel-main-image,
+  .hotel-secondary-images {
+    width: 100%;
+  }
+
+  .hotel-secondary-images {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+
+  .hotel-secondary-image {
+    width: 30%;
+  }
+}
