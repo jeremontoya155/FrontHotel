@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import WhatsAppLink from './WhatsAppLink';
 import HotelCard from './HotelCard';
 import SearchBar from './SearchBar';
+import logo from '../images/logotipo.jpg';
+
 import { ClipLoader } from 'react-spinners'; // Importar el spinner
 
 const HotelCatalog = () => {
@@ -62,13 +64,18 @@ const HotelCatalog = () => {
   };
 
   return (
-    <div className="hospedajes">
-      <SearchBar />
-      <h1>Lista de Hospedajes</h1>
-      <div className="hotel-catalog">
-        {hoteles.map(hotel => (
-          <HotelCard key={hotel.id} hotel={hotel} />
-        ))}
+    <div>
+      <div className="nosotros-logo-section">
+        <img src={logo} alt="Logo de Temporarios New York" className="nosotros-logo" />
+      </div>
+      <div className="hospedajes">
+        <SearchBar />
+        <h1>Lista de Hospedajes</h1>
+        <div className="hotel-catalog">
+          {hoteles.map(hotel => (
+            <HotelCard key={hotel.id} hotel={hotel} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,31 +1,41 @@
-// Navbar.js
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../images/logo.png";
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
+  const handleExternalLinkClick = (url) => {
+    window.open(url, '_blank');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header className="header">
-      <Link to='/'>
+      <span onClick={() => handleLinkClick('/')}>
         <img
           className="logo-img"
           loading="lazy"
           alt="Logo"
           src={logo}
         />
-      </Link>
+      </span>
       <div className="navigation-wrapper">
         <div className="navigation"> 
-          <Link className="nav-link" to='/'>INICIO</Link>
-          <Link className="nav-link" to='/hospedajes'>HOSPEDAJES</Link>
-          <Link className="nav-link" to='/nosotros'>NOSOTROS</Link>
-          <a
+          <span className="nav-link" onClick={() => handleLinkClick('/')}>INICIO</span>
+          <span className="nav-link" onClick={() => handleLinkClick('/hospedajes')}>HOSPEDAJES</span>
+          <span className="nav-link" onClick={() => handleLinkClick('/nosotros')}>NOSOTROS</span>
+          <span
             className="nav-link"
-            href="https://wa.me/5493517045448?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para..."
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => handleExternalLinkClick('https://wa.me/5493517045448?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para...')}
           >
-            CONTACTO</a>
+            CONTACTO
+          </span>
         </div>
       </div>
     </header>
