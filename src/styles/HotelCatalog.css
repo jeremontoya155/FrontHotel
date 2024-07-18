@@ -7,7 +7,8 @@
 
 .loading {
   margin-top: 10rem;
-  text-align: center; /* Centrar el texto de carga */
+  text-align: center; 
+  height: 60vh;
 }
 
 .hotel-catalog {

@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <header className="header">
-      <img
-        className="logo-img"
-        loading="lazy"
-        alt=""
-        src={logo}
-      />
-
+      <Link to='/'>
+        <img
+          className="logo-img"
+          loading="lazy"
+          alt="Logo"
+          src={logo}
+        />
+      </Link>
       <div className="navigation-wrapper">
         <div className="navigation"> 
           <Link className="nav-link" to='/'>INICIO</Link>

@@ -9,17 +9,29 @@
   left: 0;
   background-color: var(--color-black);
 }
-.footer-item{
-  margin: 0.2rem;
+
+.footer-item {
+  margin: 0.2rem 0; /* Añadir margen vertical */
   width: fit-content;
+  color: var(--color-whitesmoke);
+  text-decoration: none;
+  display: block; /* Asegurar que se muestren como bloques separados */
+  cursor: pointer; /* Asegurar que el cursor cambie al pointer */
 }
-.footer-item:hover{
+
+.footer-item:hover {
   color: var(--color-chocolate);
-  cursor: pointer;
 }
+
+.logo-incial-icon3 {
+  cursor: pointer; /* Asegurar que el cursor cambie al pointer */
+}
+
+
 .inicio-todos-hospedajes-container5 {
   width: 100%;
 }
+
 .inicio-todos-hospedajes-container4,
 .logo-incial-icon3 {
   position: relative;
@@ -27,21 +39,24 @@
   overflow: hidden;
   z-index: 1;
 }
+
 .inicio-todos-hospedajes-container4 {
   width: 23.25rem;
   line-height: 120%;
   font-weight: 600;
-  display: -webkit-inline-box;
-  align-items: center;
-  -webkit-box-orient: vertical;
+  display: flex;
+  flex-direction: column; /* Asegurar que se muestren en columna */
+  align-items: flex-start;
   flex-shrink: 0;
 }
+
 .logo-incial-icon3 {
   align-self: stretch;
   flex: 1;
   max-height: 100%;
   object-fit: cover;
 }
+
 .logo-incial-frame {
   height: 11.875rem;
   width: 22.125rem;
@@ -53,25 +68,28 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .footer-container,
 .footer {
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 .footer-container {
   flex: 1;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  max-width: 100%;
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-5xl);
   color: var(--color-whitesmoke);
   font-family: var(--title-hero);
 }
+
 .footer {
   margin-top: 5rem;
   width: 100%;
@@ -79,7 +97,13 @@
   justify-content: flex-start;
   line-height: normal;
   letter-spacing: normal;
+  background-color: var(--color-black);
+  color: var(--color-whitesmoke);
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 @media screen and (max-width: 825px) {
   .footer-container {
     flex-wrap: wrap;
@@ -88,6 +112,7 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
   .inicio-todos-hospedajes-container4 {
     font-size: var(--font-size-lgi);
