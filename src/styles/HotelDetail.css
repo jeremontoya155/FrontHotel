@@ -17,9 +17,14 @@
 }
 
 .hotel-title {
-  font-size: 2rem;
-  color: #333;
   display: flex;
+  flex-direction: column;
+}
+
+.hotel-title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .hotel-location {
@@ -29,32 +34,83 @@
 
 .hotel-price {
   font-size: 1.5rem;
+  font-weight: bold;
   color: #dc5f00;
+  text-align: right;
 }
 
-.hotel-images {
+.container {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.hotel-main-image {
-  width: 70%;
-  height: auto;
+.main-image {
+  flex: 3;
+  margin-right: 10px;
+  height: calc(100vh - 200px);
+  /* Altura dinámica */
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-.hotel-secondary-images {
+.thumbnail-images {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 10px;
-  width: 30%;
+  height: calc(100vh - 200px);
+  /* Altura dinámica */
 }
 
-.hotel-secondary-image {
+.thumbnail-images img {
   width: 100%;
-  height: auto;
+  height: calc(33.33% - 6.66px);
+  /* Altura de cada imagen secundaria */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.thumbnail-images .more-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(33.33% - 6.66px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.thumbnail-images .more-images::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Sombreado */
   border-radius: 10px;
 }
+
+.thumbnail-images .more-images span {
+  position: relative;
+  color: var(--color-chocolate);
+  font-size: 9rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 .hotel-main {
   display: flex;
@@ -85,6 +141,26 @@
   color: #333;
 }
 
+.services-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 .hotel-map iframe {
   border: 0;
   border-radius: 10px;
@@ -104,22 +180,103 @@
   background-color: #b44d00;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  margin-top: 60px;
+  /* Espacio para el navbar */
+}
+
+.full-image-modal .modal-content {
+  background-color: transparent;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+  border-radius: 20%;
+  padding: 3px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal-images img {
+  width: calc(33.33% - 20px);
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal-images img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.full-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
-  .hotel-images {
+  .container {
     flex-direction: column;
   }
 
-  .hotel-main-image,
-  .hotel-secondary-images {
+  .main-image,
+  .thumbnail-images {
     width: 100%;
   }
 
-  .hotel-secondary-images {
+  .thumbnail-images {
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
+    height: auto;
   }
 
-  .hotel-secondary-image {
+  .thumbnail-images img {
     width: 30%;
+    height: auto;
+  }
+
+  .thumbnail-images .more-images {
+    width: 30%;
+    height: auto;
   }
 }
