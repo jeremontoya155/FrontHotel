@@ -1,7 +1,9 @@
 @keyframes move-arrow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(10px);
   }
@@ -18,24 +20,22 @@
   justify-content: center;
 }
 
-
 .banner-flecha {
   width: 90px;
   position: absolute;
-  bottom: 20px; 
+  bottom: 20px;
   rotate: 90deg;
   transform: translateX(-50%);
-  z-index: 2; /* Asegúrate de que esté por encima de la imagen de fondo */
+  z-index: 2;
   animation: move-arrow 2s infinite;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .banner-flecha:hover {
   cursor: pointer;
   animation: none;
-  transform: rotate(180deg); 
+  transform: rotate(180deg);
 }
-
 
 .overlay {
   position: absolute;
@@ -72,62 +72,67 @@
 }
 
 .somos-la-opcin-container {
-  width: 24.813rem;
-  position: absolute;
-  margin: 0 !important;
-  bottom: 3.063rem;
+  width: 100%;
+  margin-top: 1rem;
   letter-spacing: 0.04em;
-  line-height: 117.86%;
+  line-height: 1.5;
   display: inline-block;
   font-size: var(--font-size-2xl);
 }
 
 .temporarios-nyc1 {
   margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-darkslategray);
+  text-align: center;
   filter: drop-shadow(1.2px 1.2px 1.2px rgba(74, 74, 74, 0.8));
 }
 
 .alquileres-temporarios {
-  font-size: var(--font-size-2xl);
+  font-size: 1.2rem;
   color: var(--color-dimgray);
-  margin-block-start: -1rem;
-  margin-block-end: 2rem;
+  margin: -0.5rem 0 1rem;
+  text-align: center;
 }
 
 .temporarios-nyc {
-  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
   letter-spacing: -0.02em;
-  line-height: 146%;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .encontra-tu-departamento-ideal {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 3;
-  font-size: 3.125rem;
+  width: 100%;
+  text-align: center;
 }
 
 .viv-la-experiencia {
+  font-size: 1.5rem;
   position: relative;
   letter-spacing: -0.02em;
-  line-height: 1.813rem;
+  line-height: 1.5;
   color: var(--color-chocolate);
   text-align: center;
   z-index: 3;
+  margin-top: 1rem;
 }
 
 .rental-options {
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end; /* Alinea los elementos al final del eje horizontal (derecha) */
-  text-align: right; /* Alinea el texto a la derecha */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
-  gap: 6.425rem;
-  min-width: 26.625rem;
+  gap: 1.5rem; /* Ajusta el espacio entre los elementos */
   max-width: 100%;
 }
 
@@ -145,7 +150,7 @@
   top: 0;
   border-radius: 25px;
   animation: move-arrow 2s infinite;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .wrapper-section-img {
@@ -190,21 +195,54 @@
   font-family: var(--title-page);
 }
 
+/* Responsive adjustments */
 @media screen and (max-width: 750px) {
+  .section-img-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .img-sec {
+    max-width: 100%;
+    height: auto;
+  }
+
   .rental-options {
     flex: 1;
+    align-items: center;
+    text-align: center;
   }
+
   .section {
     flex-wrap: wrap;
+    margin-right: 2rem;
   }
 }
 
 @media screen and (max-width: 675px) {
+  .banner h1 {
+    font-size: 2.1rem;
+    line-height: 1.0;
+  }
+
   .rental-options {
     min-width: 100%;
+    align-items: center;
+    text-align: center;
   }
+
   .section {
     gap: 1.75rem;
+  }
+
+  .encontra-tu-departamento-ideal {
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -213,11 +251,52 @@
     font-size: var(--font-size-2xl);
     line-height: 3.625rem;
   }
+
   .viv-la-experiencia {
     font-size: var(--font-size-lgi);
     line-height: 1.438rem;
   }
+
   .rental-options {
     gap: 3.188rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .encontra-tu-departamento-ideal {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Specific adjustments for problematic section */
+.temporarios-nyc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.temporarios-nyc-container b {
+  font-size: 2rem;
+}
+
+.temporarios-nyc-container span {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.viv-la-experiencia-container {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  .temporarios-nyc-container b {
+    font-size: 1.5rem;
+  }
+
+  .temporarios-nyc-container span {
+    font-size: 1rem;
   }
 }

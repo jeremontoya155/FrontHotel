@@ -6,7 +6,6 @@
 @import 'styles/HotelCatalog.css';
 @import 'styles/HotelDetail.css';
 
-
 main {
   padding-top: 3.875rem; 
 }
@@ -47,5 +46,22 @@ main {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+}
+
+@media (max-width: 480px) {
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .App-header {
+    padding: 1rem;
   }
 }

@@ -36,6 +36,7 @@ const Banner = () => {
           </div>
           <b className="viv-la-experiencia">Viví la experiencia...</b>
         </div>
+
         <div className="section-img-wrapper">
           <div className="wrapper-section-img">
             <img

@@ -1,107 +1,110 @@
 .search-bar {
-    margin: 1rem auto; 
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 1px 6px 6px 2px rgba(0, 0, 0, 0.4);
-    max-width: 1000px;
+  margin: 1rem auto; 
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 6px 6px 2px rgba(0, 0, 0, 0.4);
+  max-width: 1000px;
 }
 
 .search-bar__input-huesp {
-    width: 6rem;
+  width: 6rem;
 }
 
 .search-bar__date-container label {
-    margin-left: 5px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+  margin-left: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .search-bar__input,
 .search-bar__date {
-    border: 1px solid #dc5f00;
-    border-radius: 10px;
-    padding: 14px;
-    margin-right: 10px;
-    font-size: 1rem;
-    outline: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #dc5f00;
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 10px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar__dates {
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 0 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0 10px;
 }
 
 .search-bar__input-dest {
-    width: 320px;
+  width: 320px;
 }
 
 .search-bar__button {
-    background-color: #dc5f00;
-    color: white;
-    border: none;
-    height: 49px;
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-    margin-top: 19px;
+  background-color: #dc5f00;
+  color: white;
+  border: none;
+  height: 49px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: 19px;
 }
 
 .search-bar__settings {
-    margin-right: 10px;
-    margin-top: 19px;
-    height: 49px;
-    aspect-ratio: 1/1;
-    background-color: white;
-    border: 1px solid #dc5f00;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-right: 10px;
+  margin-top: 19px;
+  height: 49px;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border: 1px solid #dc5f00;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-bar__settings svg {
-    color: #dc5f00;
+  color: #dc5f00;
 }
 
 .search-bar__input::placeholder,
 .search-bar__date::placeholder {
-    color: #000000;
+  color: #000000;
 }
 
 @media screen and (max-width: 768px) {
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .search-bar__input,
-    .search-bar__date,
-    .search-bar__button,
-    .search-bar__settings {
-        margin-bottom: 10px;
-        width: 100%;
-    }
+  .search-bar__input,
+  .search-bar__date,
+  .search-bar__button,
+  .search-bar__settings {
+    
+    margin-bottom: 10px;
+    width: 90%;
+  }
 
-    .search-bar__dates {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .search-bar__dates {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0%;
+    max-width: 90%;
+  }
 
-    .search-bar__date {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+ /*  .search-bar__date {
+    margin-right: 0;
+    margin-bottom: 10px;
+  } */
 }
