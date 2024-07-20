@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ClipLoader } from 'react-spinners';
+import '../styles/HotelDetail.css'; // Asegúrate de crear este archivo CSS
 
 const HotelDetail = () => {
   const { id } = useParams();
@@ -54,7 +55,7 @@ const HotelDetail = () => {
     hotel.imagen_principal_1,
     hotel.imagen_principal_2,
     hotel.imagen_principal_3,
-    hotel.imagen_principal_4, 
+    hotel.imagen_principal_4,
     hotel.imagen_principal_5
   ].filter(img => img);
 
@@ -84,7 +85,10 @@ const HotelDetail = () => {
               <h1>{hotel.nombre}</h1>
               <p className="hotel-location">{hotel.localidad}, {hotel.pais}</p>
             </div>
-            <p className="hotel-price">${hotel.precio} por noche</p>
+            <p className="hotel-price">
+              ${hotel.precio} <span className="price-per-night">por noche</span>
+            </p>
+
           </div>
           <div className="container">
             <div className="main-image">
@@ -156,7 +160,7 @@ const HotelDetail = () => {
       {selectedImage && (
         <div className="modal full-image-modal" onClick={handleCloseImageModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={handleCloseImageModal}>&times;</span>
+            <span className="close-min" onClick={handleCloseImageModal}>&times;</span>
             <img src={selectedImage} alt="Imagen seleccionada" className="full-image" />
           </div>
         </div>

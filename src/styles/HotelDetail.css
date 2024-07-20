@@ -1,5 +1,5 @@
 .hotel-detail-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -7,29 +7,32 @@
 .hotel-header {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .hotel-info-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .hotel-title {
   display: flex;
-  flex-direction: column;
+  align-items: baseline; 
+  gap: 10px; 
 }
 
 .hotel-title h1 {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
+  margin: 0;
 }
 
 .hotel-location {
   font-size: 1.2rem;
   color: #777;
+  margin: 0; 
 }
 
 .hotel-price {
@@ -37,6 +40,13 @@
   font-weight: bold;
   color: #dc5f00;
   text-align: right;
+  margin: 8px;
+}
+
+.price-per-night {
+  color: #777; 
+  font-weight: normal; 
+  font-size: medium;
 }
 
 .container {
@@ -50,7 +60,6 @@
   flex: 3;
   margin-right: 10px;
   height: calc(100vh - 200px);
-  /* Altura dinámica */
 }
 
 .main-image img {
@@ -66,13 +75,11 @@
   flex: 1;
   gap: 10px;
   height: calc(100vh - 200px);
-  /* Altura dinámica */
 }
 
 .thumbnail-images img {
   width: 100%;
   height: calc(33.33% - 6.66px);
-  /* Altura de cada imagen secundaria */
   border-radius: 10px;
   object-fit: cover;
 }
@@ -96,7 +103,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Sombreado */
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
@@ -109,8 +116,6 @@
   width: 100%;
   height: 100%;
 }
-
-
 
 .hotel-main {
   display: flex;
@@ -201,8 +206,6 @@
   max-height: 90%;
   overflow-y: auto;
   position: relative;
-  margin-top: 60px;
-  /* Espacio para el navbar */
 }
 
 .full-image-modal .modal-content {
@@ -210,6 +213,9 @@
   max-width: 90%;
   max-height: 90%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close {
@@ -220,7 +226,7 @@
   font-size: 2rem;
   cursor: pointer;
   color: white;
-  background-color: red;
+  background-color: rgba(216, 33, 33, 0.831);
   border-radius: 20%;
   padding: 3px;
   height: 30px;
@@ -229,28 +235,45 @@
   justify-content: center;
 }
 
+.close-min {
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  width: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(216, 33, 33, 0.831);
+  border-radius: 20%;
+  padding: 3px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .modal-images {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center; /* Centrar las imágenes */
 }
 
 .modal-images img {
-  width: calc(33.33% - 20px);
-  height: auto;
+  width: 300px; /* Ajustar el tamaño de las imágenes */
+  height: 200px; /* Ajustar el tamaño de las imágenes */
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
 }
 
 .modal-images img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   transition: transform 0.2s;
 }
 
 .full-image {
-  width: 100%;
-  height: auto;
+  max-width: 80%;
+  max-height: 80%;
   border-radius: 10px;
 }
 
