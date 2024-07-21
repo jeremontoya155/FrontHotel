@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img_banner from '../images/baner.png';
 import img_section from '../images/sectionimg.jpg';
 import flecha from '../images/icons-arrow.png';
@@ -10,6 +10,8 @@ const Banner = () => {
     document.getElementById('flecha').scrollIntoView({ behavior: 'smooth' });
   };
 
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
       <div className="banner" style={{ backgroundImage: `url(${img_banner})` }}>
@@ -20,7 +22,7 @@ const Banner = () => {
         <img src={flecha} alt="flecha" className='banner-flecha' onClick={scrollToSection} id="flecha" />
       </div>
       <div></div>
-      <SearchBar />
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <div className="section">
         <div className="rental-options">
           <div className="encontra-tu-departamento-ideal">
@@ -53,3 +55,4 @@ const Banner = () => {
 };
 
 export default Banner;
+

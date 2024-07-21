@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { FaSlidersH } from 'react-icons/fa';
 
-const SearchBar = () => {
+const SearchBar = ({ searchTerm = '', setSearchTerm, filters = {}, setFilters }) => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [guests, setGuests] = useState(1);
+
+  const handleInputChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   const handleStartDateChange = (e) => {
     setStartDate(e.target.value);
@@ -17,8 +20,14 @@ const SearchBar = () => {
     setEndDate(e.target.value);
   };
 
-  const handleGuestsChange = (e) => {
-    setGuests(e.target.value);
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setFilters((prevFilters) => ({ ...prevFilters, [name]: checked }));
   };
 
   const today = new Date().toISOString().split('T')[0];
@@ -26,14 +35,27 @@ const SearchBar = () => {
   return (
     <div className="search-bar">
       <div className="search-bar__date-container">
-        <label>¿A donde viajas?</label>
+        <label>Nombre del Hotel</label>
         <input
           type="text"
-          placeholder="Elegí tu próximo destino..."
+          placeholder="Buscar por nombre..."
+          value={searchTerm}
+          onChange={handleInputChange}
           className="search-bar__input search-bar__input-dest"
         />
       </div>
-      <div className="search-bar__dates">
+      <div className="search-bar__date-container">
+        <label>Localidad</label>
+        <input
+          type="text"
+          name="localidad"
+          placeholder="Buscar por localidad..."
+          value={filters.localidad || ''}
+          onChange={handleFilterChange}
+          className="search-bar__input search-bar__input-dest"
+        />
+      </div>
+      {/* <div className="search-bar__dates">
         <div className="search-bar__date-container">
           <label htmlFor="start-date">Fecha de Llegada</label>
           <input
@@ -56,33 +78,47 @@ const SearchBar = () => {
             className="search-bar__date"
           />
         </div>
-      </div>
-      
+      </div> */}
       <div className="search-bar__date-container">
-        <label>Huespedes</label>
+        <label>Huéspedes</label>
         <select
           id="guests"
-          value={guests}
-          onChange={handleGuestsChange}
+          name="huespedes"
+          value={filters.huespedes || 1}
+          onChange={handleFilterChange}
           className="search-bar__input search-bar__input-huesp"
         >
           {[...Array(8).keys()].map(i => (
             <option key={i + 1} value={i + 1}>{i + 1}</option>
           ))}
         </select>
-        
       </div>
       <div className="search-bar__date-container">
-
+        <label>Pileta</label>
+        <input
+          type="checkbox"
+          name="pileta"
+          checked={filters.pileta || false}
+          onChange={handleCheckboxChange}
+        />
+      </div>
+      <div className="search-bar__date-container">
+        <label>Cochera</label>
+        <input
+          type="checkbox"
+          name="cochera"
+          checked={filters.cochera || false}
+          onChange={handleCheckboxChange}
+        />
+      </div>
+      {/* <div className="search-bar__date-container">
         <button className="search-bar__button">Buscar</button>
-      </div>
-      <div className="search-bar__date-container">
-
-
+      </div> */}
+      {/* <div className="search-bar__date-container">
         <button className="search-bar__settings">
           <FaSlidersH />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import WhatsAppLink from './WhatsAppLink';
 import HotelCard from './HotelCard';
 import SearchBar from './SearchBar';
 import logo from '../images/logotipo.jpg';
-
 import { ClipLoader } from 'react-spinners'; // Importar el spinner
 
 const HotelCatalog = () => {
   const [hoteles, setHoteles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filters, setFilters] = useState({
+    huespedes: 1,
+    pileta: false,
+    cochera: false,
+    localidad: ''
+  });
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/hoteles`)
@@ -47,21 +52,13 @@ const HotelCatalog = () => {
     return <div>No se encontraron hoteles disponibles.</div>;
   }
 
-  const handleReservarClick = (link) => {
-    if (link) {
-      window.open(link, '_blank');
-    } else {
-      alert('Enlace de reserva no disponible');
-    }
-  };
-
-  const handleUbicacionClick = (link) => {
-    if (link) {
-      window.open(link, '_blank');
-    } else {
-      alert('Enlace de ubicación no disponible');
-    }
-  };
+  const filteredHoteles = hoteles.filter(hotel =>
+    (searchTerm === '' || hotel.nombre.toLowerCase().includes(searchTerm.toLowerCase())) &&
+    (filters.localidad === '' || hotel.localidad.toLowerCase().includes(filters.localidad.toLowerCase())) &&
+    (filters.huespedes <= hotel.huespedes) &&
+    (!filters.pileta || hotel.pileta) &&
+    (!filters.cochera || hotel.cochera)
+  );
 
   return (
     <div>
@@ -69,10 +66,15 @@ const HotelCatalog = () => {
         <img src={logo} alt="Logo de Temporarios New York" className="nosotros-logo" />
       </div>
       <div className="hospedajes">
-        <SearchBar />
+        <SearchBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          filters={filters}
+          setFilters={setFilters}
+        />
         <h1>Lista de Hospedajes</h1>
         <div className="hotel-catalog">
-          {hoteles.map(hotel => (
+          {filteredHoteles.map(hotel => (
             <HotelCard key={hotel.id} hotel={hotel} />
           ))}
         </div>

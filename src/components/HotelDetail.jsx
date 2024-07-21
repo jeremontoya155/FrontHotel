@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ClipLoader } from 'react-spinners';
+import WhatsAppLink from './WhatsAppLink';
 import '../styles/HotelDetail.css'; // Asegúrate de crear este archivo CSS
 
 const HotelDetail = () => {
@@ -75,6 +76,9 @@ const HotelDetail = () => {
     setSelectedImage(img);
   };
 
+  const phoneNumber = process.env.REACT_APP_WSP;
+  const message = `Hola! Quiero reservar el siguiente hospedaje:\n\nNombre: ${hotel.nombre}\nLocalidad: ${hotel.localidad}\nPaís: ${hotel.pais}\nPrecio por noche: $${hotel.precio}\n\nDirección: ${hotel.direccion}\nCantidad de personas: ${hotel.huespedes}\n\n${hotel.link_booking}`;
+
   return (
     <div>
       <Navbar />
@@ -108,10 +112,6 @@ const HotelDetail = () => {
         </div>
         <div className="hotel-main">
           <div className="hotel-info">
-            {/* <div className="hotel-services">
-              <h3>Servicios</h3>
-              <p>{hotel.servicios?.join(', ')}</p>
-            </div> */}
             <div className="hotel-description">
               <h3>Descripción general</h3>
               <p>{hotel.datos}</p>
@@ -141,6 +141,7 @@ const HotelDetail = () => {
               <p>Dirección: {hotel.direccion}</p>
               <p>Cantidad de personas: {hotel.huespedes}</p>
               <button className="reservation-button" onClick={() => window.open(hotel.link_booking, '_blank')}>Reservar</button>
+              <WhatsAppLink phoneNumber={phoneNumber} message={message} />
             </div>
           </div>
         </div>

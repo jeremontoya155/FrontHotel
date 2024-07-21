@@ -1,8 +1,8 @@
 import React from 'react';
 import './WhatsAppLink.css'; // Ajusta la ruta según tu estructura
 
-const WhatsAppLink = ({ phoneNumber }) => {
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=Quiero%20hacer%20una%20reserva`;
+const WhatsAppLink = ({ phoneNumber, message }) => {
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
   const handleClick = () => {
     window.open(whatsappUrl, '_blank');
@@ -16,3 +16,4 @@ const WhatsAppLink = ({ phoneNumber }) => {
 };
 
 export default WhatsAppLink;
+
