@@ -108,10 +108,10 @@ const HotelDetail = () => {
         </div>
         <div className="hotel-main">
           <div className="hotel-info">
-            <div className="hotel-services">
+            {/* <div className="hotel-services">
               <h3>Servicios</h3>
               <p>{hotel.servicios?.join(', ')}</p>
-            </div>
+            </div> */}
             <div className="hotel-description">
               <h3>Descripción general</h3>
               <p>{hotel.datos}</p>
