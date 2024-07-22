@@ -126,11 +126,14 @@ const HotelDetail = () => {
         </div>
         <div className="hotel-main">
           <div className="hotel-info">
+            <h3>Datos generales</h3>
+            <p>Dirección: {hotel.direccion}</p>
+            <p>Cantidad de personas: {hotel.huespedes}</p>
             <div className="hotel-rating">
               <p>{hotel.calificacion} estrellas</p>
             </div>
             <div className="hotel-description">
-              <h3>Descripción general</h3>
+              <h3>Descripción</h3>
               <p>{hotel.datos}</p>
             </div>
             <div className="hotel-map">
@@ -151,8 +154,6 @@ const HotelDetail = () => {
             </div>
             <div className="hotel-reservation">
               <h3>Reserva</h3>
-              <p>Dirección: {hotel.direccion}</p>
-              <p>Cantidad de personas: {hotel.huespedes}</p>
               <div className='reservation-button__content'>
                 <button className="reservation-button reservation-button__booking" onClick={() => window.open(hotel.link_booking, '_blank')}>Reservar en Booking</button>
                 <div onClick={handleExternalLinkClick} className=" reservation-button reservation-button__wp">
