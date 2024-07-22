@@ -31,11 +31,10 @@
   background-color: #1EBE56;
 }
 
-
 .hotel-title {
   display: flex;
-  align-items: baseline; 
-  gap: 10px; 
+  align-items: baseline;
+  gap: 10px;
 }
 
 .hotel-title h1 {
@@ -48,7 +47,7 @@
 .hotel-location {
   font-size: 1.2rem;
   color: #777;
-  margin: 0; 
+  margin: 0;
 }
 
 .hotel-price {
@@ -60,8 +59,8 @@
 }
 
 .price-per-night {
-  color: #777; 
-  font-weight: normal; 
+  color: #777;
+  font-weight: normal;
   font-size: medium;
 }
 
@@ -129,8 +128,7 @@
   font-size: 9rem;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  align-items: center;
 }
 
 .hotel-main {
@@ -187,18 +185,42 @@
   border-radius: 10px;
 }
 
+.reservation-button__content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+}
+
 .reservation-button {
-  background-color: #dc5f00;
   color: white;
-  border: none;
-  padding: 10px 20px;
+  padding: 10px 0;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  width: 190px;
 }
 
-.reservation-button:hover {
-  background-color: #b44d00;
+.reservation-button__wp {
+  background-color: #1EBE56;
+  border: 1px solid #1EBE56;
+}
+
+.reservation-button__wp:hover {
+  background-color: #ffffff;
+  color: #1EBE56;
+}
+
+.reservation-button__booking {
+  background-color: #006ce4;
+  border: 1px solid #006ce4;
+}
+
+.reservation-button__booking:hover {
+  background-color: #ffffff;
+  color: #006ce4;
 }
 
 .modal {
@@ -267,16 +289,17 @@
   align-items: center;
   justify-content: center;
 }
+
 .modal-images {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center; /* Centrar las imágenes */
+  justify-content: center;
 }
 
 .modal-images img {
-  width: 300px; /* Ajustar el tamaño de las imágenes */
-  height: 200px; /* Ajustar el tamaño de las imágenes */
+  width: 300px;
+  height: 200px;
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
@@ -316,6 +339,43 @@
 
   .thumbnail-images .more-images {
     width: 30%;
+    height: auto;
+  }
+
+  .hotel-detail-container {
+    margin-top: 1.5rem;
+  }
+
+  .hotel-header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hotel-info-header {
+    flex-direction: column;
+  }
+
+  .hotel-price {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hotel-main {
+    padding: 0 10px;
+  }
+
+  .hotel-description,
+  .hotel-services,
+  .hotel-rating,
+  .hotel-map,
+  .hotel-prices,
+  .hotel-reservation {
+    margin-bottom: 10px;
+  }
+
+  .modal-images img {
+    width: 100%;
     height: auto;
   }
 }

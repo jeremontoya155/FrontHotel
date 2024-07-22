@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ClipLoader } from 'react-spinners';
 import WhatsAppLink from './WhatsAppLink';
@@ -13,6 +13,20 @@ const HotelDetail = () => {
   const [error, setError] = useState(null);
   const [showAllImages, setShowAllImages] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
+  const handleExternalLinkClick = (url) => {
+    const whatsappMessage = `Hola! Vi este hospedaje ${hotel.nombre} en ${hotel.localidad} y estaba interesado en reservar.`;
+    const whatsappUrl = `https://wa.me/3517045448?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    window.scrollTo(0, 0);
+  };
 
   useEffect(() => {
     if (!hotel) {
@@ -112,13 +126,12 @@ const HotelDetail = () => {
         </div>
         <div className="hotel-main">
           <div className="hotel-info">
+            <div className="hotel-rating">
+              <p>{hotel.calificacion} estrellas</p>
+            </div>
             <div className="hotel-description">
               <h3>Descripción general</h3>
               <p>{hotel.datos}</p>
-            </div>
-            <div className="hotel-rating">
-              <h3>Calificación</h3>
-              <p>{hotel.calificacion} estrellas</p>
             </div>
             <div className="hotel-map">
               <h3>Mapa</h3>
@@ -140,8 +153,12 @@ const HotelDetail = () => {
               <h3>Reserva</h3>
               <p>Dirección: {hotel.direccion}</p>
               <p>Cantidad de personas: {hotel.huespedes}</p>
-              <button className="reservation-button" onClick={() => window.open(hotel.link_booking, '_blank')}>Reservar</button>
-              <WhatsAppLink phoneNumber={phoneNumber} message={message} />
+              <div className='reservation-button__content'>
+                <button className="reservation-button reservation-button__booking" onClick={() => window.open(hotel.link_booking, '_blank')}>Reservar en Booking</button>
+                <div onClick={handleExternalLinkClick} className=" reservation-button reservation-button__wp">
+                  Resevar por WhatsApp
+                </div>
+              </div>
             </div>
           </div>
         </div>
