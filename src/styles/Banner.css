@@ -185,7 +185,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   position: relative;
   flex-direction: row;
   gap: 3.5rem;

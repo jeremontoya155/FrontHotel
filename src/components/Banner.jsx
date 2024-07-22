@@ -3,7 +3,7 @@ import img_banner from '../images/baner.png';
 import img_section from '../images/sectionimg.jpg';
 import flecha from '../images/icons-arrow.png';
 import '../styles/Banner.css';
-import SearchBar from './SearchBar';
+/* import SearchBar from './SearchBar'; */
 import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
@@ -16,7 +16,7 @@ const Banner = () => {
     navigate(path);
     window.scrollTo(0, 0);
   };
-  const [searchTerm, setSearchTerm] = useState('');
+  /* const [searchTerm, setSearchTerm] = useState(''); */
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Banner = () => {
         <img src={flecha} alt="flecha" className='banner-flecha' onClick={scrollToSection} id="flecha" />
       </div>
       <div></div>
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      {/* <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
       <div className="section">
         <div className="rental-options">
           <div className="encontra-tu-departamento-ideal">
