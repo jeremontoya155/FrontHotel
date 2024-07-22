@@ -22,3 +22,11 @@
 h1 {
   text-align: center; /* Centrar el título */
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hotel-catalog {
+    gap: 2rem;
+    padding: 0;
+  }
+}

@@ -1,4 +1,5 @@
 @keyframes move-arrow {
+
   0%,
   100% {
     transform: translateX(0);
@@ -77,13 +78,14 @@
   letter-spacing: 0.04em;
   display: inline-block;
   font-size: var(--font-size-2xl);
+  text-align: left;
 }
 
 .temporarios-nyc1 {
   margin: 0;
   font-size: 1.5rem;
   color: var(--color-darkslategray);
-  text-align: center;
+
   filter: drop-shadow(1.2px 1.2px 1.2px rgba(74, 74, 74, 0.8));
 }
 
@@ -91,7 +93,7 @@
   font-size: 1.2rem;
   color: var(--color-dimgray);
   margin: 0.5rem 0 1rem;
-  text-align: center;
+
 }
 
 .temporarios-nyc {
@@ -99,17 +101,17 @@
   font-weight: bold;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
 }
 
 .encontra-tu-departamento-ideal {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 3;
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .viv-la-experiencia {
@@ -129,11 +131,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
   position: relative;
   gap: 1rem;
-  max-width: 100%;
+  max-width: 40vw;
 }
 
 .img-sec {
@@ -208,7 +210,7 @@
   }
 
   .img-sec {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
   }
 
@@ -216,6 +218,7 @@
     flex: 1;
     align-items: center;
     text-align: center;
+    padding-bottom: 0;
   }
 
   .section {
@@ -228,6 +231,7 @@
   .img-sec {
     animation: none;
   }
+
   .banner h1 {
     font-size: 2.1rem;
     line-height: 1.0;

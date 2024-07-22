@@ -118,6 +118,10 @@
     align-items: center;
   }
 
+  .footer-item {
+    width: auto;
+  }
+
   .inicio-todos-hospedajes-container4 {
     font-size: var(--font-size-lgi);
     line-height: 1.438rem;
@@ -126,6 +130,7 @@
   }
 
   .logo-incial-frame {
+    height: auto;
     align-items: center;
     text-align: center;
   }

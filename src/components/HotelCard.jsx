@@ -6,16 +6,16 @@ import no_img from '../images/no-image.png';
 const HotelCard = ({ hotel }) => {
   const navigate = useNavigate();
 
-  const handleReservarClick = () => {
+  const handleCardClick = () => {
     navigate(`/hospedaje/${hotel.id}`, { state: { hotel } });
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   };
 
   return (
-    <div className="hotel-card" key={hotel.id}>
+    <div className="hotel-card" key={hotel.id} onClick={handleCardClick}>
       <img className="hotel-card__image" src={hotel.imagen_principal_1 ? hotel.imagen_principal_1 : no_img} alt={hotel.id} />
       <div className="hotel-card__content">
-        <div>
+        <div className='hotel-card__header'>
           <h2 className="hotel-card__title">{hotel.nombre}</h2>
           <h3 className="hotel-card__location">{hotel.localidad}, {hotel.pais}</h3>
         </div>
@@ -31,7 +31,7 @@ const HotelCard = ({ hotel }) => {
             <div>${hotel.precio}</div>
             <div className="hotel-card__price-pn">por noche</div>
           </div>
-          <button className="hotel-card__button" onClick={handleReservarClick}>Reservar</button>
+          <button className="hotel-card__button">Ver más</button>
         </div>
       </div>
     </div>
