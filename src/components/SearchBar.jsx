@@ -16,24 +16,25 @@ const SearchBar = ({ searchTerm = '', setSearchTerm, filters = {}, setFilters })
     }
   };
 
-  const handleEndDateChange = (e) => {
+  /* const handleEndDateChange = (e) => {
     setEndDate(e.target.value);
   };
-
+ */
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
   };
 
-  const handleCheckboxChange = (e) => {
+  /* const handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
     setFilters((prevFilters) => ({ ...prevFilters, [name]: checked }));
   };
-
+ */
   const today = new Date().toISOString().split('T')[0];
 
   return (
     <div className="search-bar">
+      <h2 className='search-bar__title'>Filtros</h2>
       <div className="search-bar__date-container">
         <label>Nombre del Hotel</label>
         <input
@@ -93,7 +94,7 @@ const SearchBar = ({ searchTerm = '', setSearchTerm, filters = {}, setFilters })
           ))}
         </select>
       </div>
-      <div className="search-bar__date-container">
+      {/* <div className="search-bar__date-container">
         <label>Pileta</label>
         <input
           type="checkbox"
@@ -110,7 +111,7 @@ const SearchBar = ({ searchTerm = '', setSearchTerm, filters = {}, setFilters })
           checked={filters.cochera || false}
           onChange={handleCheckboxChange}
         />
-      </div>
+      </div> */}
       {/* <div className="search-bar__date-container">
         <button className="search-bar__button">Buscar</button>
       </div> */}

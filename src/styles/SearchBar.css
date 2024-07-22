@@ -10,6 +10,10 @@
   max-width: 1000px;
 }
 
+.search-bar__title {
+  padding-right: 25px;
+}
+
 .search-bar__input-huesp {
   width: 6rem;
 }
