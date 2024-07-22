@@ -75,7 +75,6 @@
   width: 100%;
   margin-top: 1rem;
   letter-spacing: 0.04em;
-  line-height: 1.5;
   display: inline-block;
   font-size: var(--font-size-2xl);
 }
@@ -91,7 +90,7 @@
 .alquileres-temporarios {
   font-size: 1.2rem;
   color: var(--color-dimgray);
-  margin: -0.5rem 0 1rem;
+  margin: 0.5rem 0 1rem;
   text-align: center;
 }
 
@@ -125,6 +124,7 @@
 }
 
 .rental-options {
+  padding: 2rem;
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@
   align-items: center;
   text-align: center;
   position: relative;
-  gap: 1.5rem; /* Ajusta el espacio entre los elementos */
+  gap: 1rem;
   max-width: 100%;
 }
 
@@ -145,17 +145,16 @@
   flex-shrink: 0;
   z-index: 1;
   object-fit: contain;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   border-radius: 25px;
-  animation: move-arrow 2s infinite;
+  animation: move-arrow 3s infinite;
   transition: transform 0.3s ease;
 }
 
 .wrapper-section-img {
   align-self: stretch;
-  height: 32.125rem;
   position: relative;
   border-radius: var(--br-mini);
   max-width: 100%;
@@ -178,6 +177,7 @@
 }
 
 .section {
+  width: 80%;
   max-width: 1000px;
   display: flex;
   align-items: center;
@@ -225,6 +225,9 @@
 }
 
 @media screen and (max-width: 675px) {
+  .img-sec {
+    animation: none;
+  }
   .banner h1 {
     font-size: 2.1rem;
     line-height: 1.0;
@@ -249,7 +252,6 @@
 @media screen and (max-width: 450px) {
   .temporarios-nyc {
     font-size: var(--font-size-2xl);
-    line-height: 3.625rem;
   }
 
   .viv-la-experiencia {
@@ -258,7 +260,6 @@
   }
 
   .rental-options {
-    gap: 3.188rem;
     align-items: center;
     text-align: center;
   }

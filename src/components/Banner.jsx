@@ -4,12 +4,18 @@ import img_section from '../images/sectionimg.jpg';
 import flecha from '../images/icons-arrow.png';
 import '../styles/Banner.css';
 import SearchBar from './SearchBar';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+  const navigate = useNavigate();
+
   const scrollToSection = () => {
     document.getElementById('flecha').scrollIntoView({ behavior: 'smooth' });
   };
-
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
   const [searchTerm, setSearchTerm] = useState('');
 
   return (
@@ -36,7 +42,7 @@ const Banner = () => {
               diferentes ciudades.
             </span>
           </div>
-          <b className="viv-la-experiencia">Viví la experiencia...</b>
+          <b className="viv-la-experiencia" onClick={() => handleLinkClick('/hospedajes')}>Viví la experiencia...</b>
         </div>
 
         <div className="section-img-wrapper">

@@ -1,10 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import img_bsas from '../images/image-2@2x.png';
 import img_cba from '../images/image-3@2x.png';
 import img_ag from '../images/image-4@2x.png';
 
 const Destinos = () => {
+    const navigate = useNavigate();
+
+    const handleLinkClick = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+
     return (
         <div>
             <section className="property-card">
@@ -122,7 +129,7 @@ const Destinos = () => {
                                 <div className="crdoba">Córdoba</div>
                             </div>
                         </div>
-                        
+
                         <div className="location-images">
                             <div className="wrapper-image">
                                 <img
@@ -140,11 +147,11 @@ const Destinos = () => {
                 </div>
             </section>
 
-           <div className="action">
-                <Link to="/hospedajes" className="view-more-button">
+            <div className="action">
+                <span onClick={() => handleLinkClick('/hospedajes')}className="view-more-button">
                     <div className="view-more-button-child"></div>
                     <div className="ver-mas">Ver Más</div>
-                </Link>
+                </span>
             </div>
         </div>
     );

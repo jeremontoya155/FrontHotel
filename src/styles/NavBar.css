@@ -72,6 +72,8 @@
     flex-wrap: wrap;
     padding: var(--padding-smi);
     justify-content: center;
+    padding: 4px;
+    gap: 0;
   }
 
   .logo-img {
@@ -89,12 +91,14 @@
 
 @media screen and (max-width: 450px) {
   .nav-link {
-    font-size: var(--font-size-base);
     line-height: 1rem;
+    font-size: 1.1rem;
+    width: 40%;
   }
 
   .navigation {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.5rem;
   }
 }
