@@ -78,7 +78,8 @@
   .nosotros-logo {
     max-width: 100%;
     height: auto;
-    margin-top: 4rem;
+    padding-top: 1rem;
+    margin-top: 2rem;
   }
 
   .nosotros-section {
