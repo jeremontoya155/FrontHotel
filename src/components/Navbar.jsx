@@ -1,41 +1,46 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import logo from "../images/logo.png";
+import { Link } from 'react-router-dom';
+import '../styles/NavBar.css';
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleLinkClick = (path) => {
-    navigate(path);
-    window.scrollTo(0, 0);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  const handleExternalLinkClick = (url) => {
-    window.open(url, '_blank');
-    window.scrollTo(0, 0);
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
     <header className="header">
-      <span onClick={() => handleLinkClick('/')}>
+      <Link to='/' className='logo-container' onClick={closeMenu}>
         <img
           className="logo-img"
           loading="lazy"
           alt="Logo"
           src={logo}
         />
-      </span>
-      <div className="navigation-wrapper">
+      </Link>
+      <button className="menu-button" onClick={toggleMenu}>
+        ☰
+      </button>
+      <div className={`navigation-wrapper ${menuOpen ? 'open' : ''}`}>
         <div className="navigation"> 
-          <span className="nav-link" onClick={() => handleLinkClick('/')}>INICIO</span>
-          <span className="nav-link" onClick={() => handleLinkClick('/hospedajes')}>HOSPEDAJES</span>
-          <span className="nav-link" onClick={() => handleLinkClick('/nosotros')}>NOSOTROS</span>
-          <span
+          <Link className="nav-link" to='/' onClick={closeMenu}>INICIO</Link>
+          <Link className="nav-link" to='/hospedajes' onClick={closeMenu}>HOSPEDAJES</Link>
+          <Link className="nav-link" to='/nosotros' onClick={closeMenu}>NOSOTROS</Link>
+          <a
             className="nav-link"
-            onClick={() => handleExternalLinkClick('https://wa.me/5493517045448?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para...')}
+            href="https://wa.me/5493517045448?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para..."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
           >
             CONTACTO
-          </span>
+          </a>
         </div>
       </div>
     </header>

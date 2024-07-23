@@ -54,13 +54,18 @@ main {
   .App-header {
     font-size: calc(8px + 2vmin);
   }
+  main {
+  padding-top: .875rem; 
+}
 }
 
 @media (max-width: 480px) {
   .App-logo {
     height: 30vmin;
   }
-
+  main {
+  padding-top: .875rem; 
+}
   .App-header {
     padding: 1rem;
   }

@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ClipLoader } from 'react-spinners';
 import WhatsAppLink from './WhatsAppLink';
-import '../styles/HotelDetail.css'; // Asegúrate de crear este archivo CSS
+import ReactStars from 'react-stars';
 
 const HotelDetail = () => {
   const { id } = useParams();
@@ -103,8 +103,15 @@ const HotelDetail = () => {
               <h1>{hotel.nombre}</h1>
               <p className="hotel-location">{hotel.localidad}, {hotel.pais}</p>
             </div>
+            <ReactStars
+                count={5}
+                value={hotel.calificacion}
+                size={24}
+                color2={'#ffd700'}
+                edit={false}
+              />
             <p className="hotel-price">
-              ${hotel.precio} <span className="price-per-night">por noche</span>
+              ${hotel.precio} <span className="price-per-night">por noche <span style={{color: 'red'}}>*</span></span>
             </p>
 
           </div>
@@ -126,12 +133,19 @@ const HotelDetail = () => {
         </div>
         <div className="hotel-main">
           <div className="hotel-info">
+            <div className="hotel-rating">
+              <br />
+              <ReactStars
+                size={36}
+                count={5}
+                value={hotel.calificacion}
+                color2={'#ffd700'}
+                edit={false}
+              />
+            </div>
             <h3>Datos generales</h3>
             <p>Dirección: {hotel.direccion}</p>
             <p>Cantidad de personas: {hotel.huespedes}</p>
-            <div className="hotel-rating">
-              <p>{hotel.calificacion} estrellas</p>
-            </div>
             <div className="hotel-description">
               <h3>Descripción</h3>
               <p>{hotel.datos}</p>
@@ -151,6 +165,7 @@ const HotelDetail = () => {
               <p>1 noche: ${hotel.precio}</p>
               <p>2 noches: ${hotel.precio * 2}</p>
               <p>3 noches: ${hotel.precio * 3}</p>
+              <p className="price-note">* Los precios son referenciales y están sujetos a cambios dependiendo de las fechas, la disponibilidad y la cantidad de personas que se hospeden. </p>
             </div>
             <div className="hotel-reservation">
               <h3>Reserva</h3>

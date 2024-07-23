@@ -12,12 +12,12 @@
   width: 100%;
   text-align: center;
   background-color: black;
-  padding: 2rem 0; /* Añadir padding para dar espacio alrededor de la imagen */
+  padding: 2rem 0;
 }
 
 .nosotros-logo {
   width: auto;
-  height: 250px; /* Tamaño fijo de la imagen */
+  height: 250px;
   display: block;
   margin: 0 auto;
 }
@@ -26,13 +26,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Ajustar dirección de los elementos */
-  margin-top: 1rem; /* Añadir margen superior */
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .nosotros-text {
   width: 100%;
-  max-width: 1200px; /* Limitar el ancho del texto */
+  max-width: 1200px;
   padding: 0 3rem;
 }
 
@@ -42,19 +42,19 @@
 }
 
 .nosotros-section {
-  max-width: 1200px; /* Limitar el ancho para alineación centrada */
-  width: 100%; /* Asegurar que ocupe el ancho completo disponible */
+  max-width: 1200px;
+  width: 100%;
   padding: 0 2rem 1rem;
   margin: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-  background-color: #fff; /* Añadir fondo blanco para contraste */
+  background-color: #fff;
 }
 
 .nosotros-subtitle {
   font-size: 2rem;
   color: #dc5f00;
-  margin: 1rem 0; /* Espaciado superior e inferior */
+  margin: 1rem 0;
 }
 
 .nosotros-description {
@@ -78,6 +78,45 @@
   .nosotros-logo {
     max-width: 100%;
     height: auto;
-    margin-top: 4rem;
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+
+  .nosotros-section {
+    padding: 0 1rem 1rem;
+    margin: 20px;
+    width: 90%; /* Ajustar el ancho en dispositivos móviles */
+  }
+
+  .nosotros-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .nosotros-description {
+    font-size: 1rem;
+  }
+
+  .nosotros-text {
+    padding: 0 1rem;
+    width: 90%; /* Ajustar el ancho en dispositivos móviles */
+  }
+}
+
+@media (max-width: 450px) {
+  .nosotros-logo {
+    height: 150px;
+  }
+
+  .nosotros-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .nosotros-description {
+    font-size: 0.9rem;
+  }
+
+  .nosotros-text {
+    padding: 0 0.5rem;
+    width: 90%; /* Ajustar el ancho en dispositivos muy pequeños */
   }
 }
