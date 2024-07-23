@@ -111,7 +111,7 @@ const HotelDetail = () => {
                 edit={false}
               />
             <p className="hotel-price">
-              ${hotel.precio} <span className="price-per-night">por noche</span>
+              ${hotel.precio} <span className="price-per-night">por noche <span style={{color: 'red'}}>*</span></span>
             </p>
 
           </div>
@@ -165,7 +165,7 @@ const HotelDetail = () => {
               <p>1 noche: ${hotel.precio}</p>
               <p>2 noches: ${hotel.precio * 2}</p>
               <p>3 noches: ${hotel.precio * 3}</p>
-              <p className="price-note">Los precios son referenciales y están sujetos a cambios dependiendo de las fechas, la disponibilidad y la cantidad de personas que se hospeden.</p>
+              <p className="price-note">* Los precios son referenciales y están sujetos a cambios dependiendo de las fechas, la disponibilidad y la cantidad de personas que se hospeden. </p>
             </div>
             <div className="hotel-reservation">
               <h3>Reserva</h3>
