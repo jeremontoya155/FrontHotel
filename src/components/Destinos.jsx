@@ -67,7 +67,7 @@ const Destinos = () => {
                         </div>
                     </div>
                 </div>
-                <div className='location'>
+                {/* <div className='location'>
 
                     <h4 className='location-title'>BRASIL</h4>
                     <div className="location-preview">
@@ -144,7 +144,7 @@ const Destinos = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
             <div className="action">
