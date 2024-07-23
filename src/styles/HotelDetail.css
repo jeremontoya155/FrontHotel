@@ -129,6 +129,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  top: -25%;
 }
 
 .hotel-main {
@@ -185,6 +186,12 @@
 .hotel-map iframe {
   border: 0;
   border-radius: 10px;
+}
+
+.price-note {
+  color: red;
+  font-weight: bold;
+  font-size: small;
 }
 
 .reservation-button__content {
@@ -318,6 +325,42 @@
 }
 
 @media screen and (max-width: 768px) {
+  .thumbnail-images .more-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(20% - 6.66px);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .thumbnail-images .more-images::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .thumbnail-images .more-images span {
+    position: relative;
+    color: var(--color-chocolate);
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -15%;
+  }
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    
+  }
   .container {
     flex-direction: column;
   }
