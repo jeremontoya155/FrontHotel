@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HotelCard from './HotelCard';
 import SearchBar from './SearchBar';
+import Search from './Search';
 import logo from '../images/logotipo.jpg';
 import { ClipLoader } from 'react-spinners'; // Importar el spinner
 
@@ -72,6 +73,7 @@ const HotelCatalog = () => {
           filters={filters}
           setFilters={setFilters}
         />
+       
         <h1>Lista de Hospedajes</h1>
         <div className="hotel-catalog">
           {filteredHoteles.map(hotel => (
