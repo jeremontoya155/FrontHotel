@@ -23,9 +23,9 @@ const Footer = () => {
           <span className="inicio-todos-hospedajes-container5">
             <span className="footer-item" onClick={() => handleLinkClick('/')}>Inicio</span>
             <span className="footer-item" onClick={() => handleLinkClick('/hospedajes')}>Todos nuestros hospedajes</span>
-            <span className="footer-item" onClick={() => handleExternalLinkClick('https://wa.me/5493517045448?text=Hola!%20Quiero%20publicar%20mi%20departamento')}>Publica tu departamento</span>
+            <span className="footer-item" onClick={() => handleExternalLinkClick('https://wa.me/5493513509500?text=Hola!%20Quiero%20publicar%20mi%20departamento')}>Publica tu departamento</span>
             <span className="footer-item" onClick={() => handleLinkClick('/nosotros')}>Nosotros</span>
-            <span className="footer-item" onClick={() => handleExternalLinkClick('https://wa.me/5493517045448?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para...')}>Contacto</span>
+            <span className="footer-item" onClick={() => handleExternalLinkClick('https://wa.me/5493513509500?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para...')}>Contacto</span>
             <span className="footer-item" onClick={() => handleLinkClick('/')}>Preguntas frecuentes</span>
             <span className="footer-item" onClick={() => handleLinkClick('/')}>Términos y condiciones</span>
           </span>

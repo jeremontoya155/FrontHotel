@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link className="nav-link" to='/nosotros' onClick={closeMenu}>NOSOTROS</Link>
           <a
             className="nav-link"
-            href="https://wa.me/5493517045448?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para..."
+            href="https://wa.me/5493513509500?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para..."
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}

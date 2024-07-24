@@ -23,7 +23,7 @@ const HotelDetail = () => {
 
   const handleExternalLinkClick = (url) => {
     const whatsappMessage = `Hola! Vi este hospedaje ${hotel.nombre} en ${hotel.localidad} y estaba interesado en reservar.`;
-    const whatsappUrl = `https://wa.me/3517045448?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/3513509500?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     window.scrollTo(0, 0);
   };
