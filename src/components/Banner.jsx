@@ -5,6 +5,7 @@ import flecha from '../images/icons-arrow.png';
 import '../styles/Banner.css';
 /* import SearchBar from './SearchBar'; */
 import { useNavigate } from 'react-router-dom';
+import Search from './Search';
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Banner = () => {
         <img src={flecha} alt="flecha" className='banner-flecha' onClick={scrollToSection} id="flecha" />
       </div>
       <div></div>
-      {/* <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
+      <Search/>
       <div className="section">
         <div className="rental-options">
           <div className="encontra-tu-departamento-ideal">

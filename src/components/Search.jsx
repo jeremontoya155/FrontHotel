@@ -36,7 +36,8 @@ const Search = () => {
         <input
           type="text"
           placeholder="Elegí tu próximo destino..."
-          className="search-bar__input search-bar__input-dest"
+          className="search-bar__input search-bar__input-dest disabled"
+          disabled
         />
       </div>
       <div className="search-bar__dates">
@@ -48,7 +49,8 @@ const Search = () => {
             value={startDate}
             min={today}
             onChange={handleStartDateChange}
-            className="search-bar__date"
+            className="search-bar__date disabled"
+            disabled
           />
         </div>
         <div className="search-bar__date-container">
@@ -59,18 +61,20 @@ const Search = () => {
             value={endDate}
             min={startDate || today}
             onChange={handleEndDateChange}
-            className="search-bar__date"
+            className="search-bar__date disabled"
+            disabled
           />
         </div>
       </div>
-      
+
       <div className="search-bar__date-container">
         <label>Huespedes</label>
         <select
           id="guests"
           value={guests}
           onChange={handleGuestsChange}
-          className="search-bar__input search-bar__input-huesp"
+          className="search-bar__input search-bar__input-huesp disabled"
+          disabled
         >
           {[...Array(8).keys()].map(i => (
             <option key={i + 1} value={i + 1}>{i + 1}</option>
@@ -80,11 +84,11 @@ const Search = () => {
       <div className="search-bar__date-container">
         <button className="search-bar__button">Buscar</button>
       </div>
-      <div className="search-bar__date-container">
+      {/* <div className="search-bar__date-container">
         <button className="search-bar__settings">
           <FaSlidersH />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

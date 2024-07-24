@@ -8,7 +8,6 @@ import Destinos from './components/Destinos';
 import HotelCatalog from './components/HotelCatalog';
 import Nosotros from './components/Nosotros';
 import HotelDetail from './components/HotelDetail';
-import Search from './components/Search';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
             <Route path="/" element={
               <>
                 <Banner />
-                <Search /> {/* Mover el componente Search aquí */}
                 <Destinos />
               </>
             } />
