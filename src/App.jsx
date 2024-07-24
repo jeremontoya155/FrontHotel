@@ -8,6 +8,7 @@ import Destinos from './components/Destinos';
 import HotelCatalog from './components/HotelCatalog';
 import Nosotros from './components/Nosotros';
 import HotelDetail from './components/HotelDetail';
+import WhatsApp from './images/whatsapp.png'
 
 function App() {
   return (
@@ -30,6 +31,14 @@ function App() {
         <footer>
           <Footer />
         </footer>
+          <a
+          href="https://wa.me/5493513509500?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para..."
+            target="_blank"
+            rel="noopener noreferrer"
+          className="whatsapp-button"
+        >
+          <img src={WhatsApp} alt="WhatsApp" /> {/* Reemplaza con la URL del icono de WhatsApp */}
+        </a>
       </div>
     </Router>
   );

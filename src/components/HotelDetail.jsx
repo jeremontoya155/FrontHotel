@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ClipLoader } from 'react-spinners';
-import WhatsAppLink from './WhatsAppLink';
 import ReactStars from 'react-stars';
 
 const HotelDetail = () => {
