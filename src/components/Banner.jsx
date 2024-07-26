@@ -39,8 +39,7 @@ const Banner = () => {
             </b>
             <span className="somos-la-opcin-container">
               Somos la opción Nro 1 de Alquileres Temporarios, por día, por
-              semana o meses, en cualquiera de nuestras localizaciones y en
-              diferentes ciudades.
+              semana o meses, en cualquiera de nuestras localizaciones.
             </span>
           </div>
           <b className="viv-la-experiencia" onClick={() => handleLinkClick('/hospedajes')}>Viví la experiencia...</b>

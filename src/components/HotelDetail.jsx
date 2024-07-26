@@ -169,7 +169,6 @@ const HotelDetail = () => {
             <div className="hotel-reservation">
               <h3>Reserva</h3>
               <div className='reservation-button__content'>
-                <button className="reservation-button reservation-button__booking" onClick={() => window.open(hotel.link_booking, '_blank')}>Reservar en Booking</button>
                 <div onClick={handleExternalLinkClick} className=" reservation-button reservation-button__wp">
                   Resevar por WhatsApp
                 </div>
