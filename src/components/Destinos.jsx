@@ -27,7 +27,7 @@ const Destinos = () => {
                     <h4 className='location-title'>ARGENTINA</h4>
                     <div className="location-preview">
                         <div className="location-images">
-                            <div className="wrapper-image">
+                            <div className="wrapper-image onClick" onClick={() => handleLinkClick('/hospedajes')}>
                                 <img
                                     className="image-icon"
                                     loading="lazy"

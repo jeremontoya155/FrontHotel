@@ -48,6 +48,10 @@
   text-decoration: none;
 }
 
+.onClick {
+  cursor: pointer;
+}
+
 .view-more-button:hover {
   background-color: var(--color-dimgray);
   cursor: pointer;
