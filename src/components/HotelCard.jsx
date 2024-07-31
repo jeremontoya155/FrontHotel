@@ -16,7 +16,7 @@ const HotelCard = ({ hotel }) => {
       <img className="hotel-card__image" src={hotel.imagen_principal_1 ? hotel.imagen_principal_1 : no_img} alt={hotel.id} />
       <div className="hotel-card__content">
         <div className='hotel-card__header'>
-          <h2 className="hotel-card__title">{hotel.nombre}</h2>
+          <h2 className="hotel-card__title" translate="no">{hotel.nombre}</h2>
           <h3 className="hotel-card__location">{hotel.localidad}, {hotel.pais}</h3>
         </div>
         <ul className="hotel-card__details">

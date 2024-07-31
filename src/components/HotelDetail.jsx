@@ -115,7 +115,7 @@ const HotelDetail = () => {
         <div className="hotel-header">
           <div className="hotel-info-header">
             <div className="hotel-title">
-              <h1>{hotel.nombre}</h1>
+              <h1 translate="no">{hotel.nombre}</h1>
               <p className="hotel-location">{hotel.localidad}, {hotel.pais}</p>
             </div>
             <ReactStars
