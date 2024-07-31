@@ -70,7 +70,12 @@ const HotelDetail = () => {
     hotel.imagen_principal_2,
     hotel.imagen_principal_3,
     hotel.imagen_principal_4,
-    hotel.imagen_principal_5
+    hotel.imagen_principal_5,
+    hotel.imagen_principal_6,
+    hotel.imagen_principal_7,
+    hotel.imagen_principal_8,
+    hotel.imagen_principal_9,
+
   ].filter(img => img);
 
   const handleShowAllImages = () => {
