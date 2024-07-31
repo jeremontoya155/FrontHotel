@@ -2,12 +2,12 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  margin-top: 2rem;
 }
 
 .hotel-header {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 .hotel-info-header {
@@ -62,6 +62,26 @@
   color: #777;
   font-weight: normal;
   font-size: medium;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  left: 20px;
+  background-color: #dc5f00cf;
+  border-radius: 10%;
+  padding: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-arrow {
+  width: 14px;
+  /* Ajusta el tamaño según sea necesario */
+  height: 24px;
+  /* Ajusta el tamaño según sea necesario */
+  margin-right: 8px;
 }
 
 .container {
@@ -356,11 +376,13 @@
     align-items: center;
     top: -15%;
   }
+
   .modal-content {
     max-width: 80%;
     max-height: 80%;
-    
+
   }
+
   .container {
     flex-direction: column;
   }

@@ -3,6 +3,8 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ClipLoader } from 'react-spinners';
 import ReactStars from 'react-stars';
+import { FaArrowLeft } from 'react-icons/fa';
+
 
 const HotelDetail = () => {
   const { id } = useParams();
@@ -17,6 +19,11 @@ const HotelDetail = () => {
 
   const handleLinkClick = (path) => {
     navigate(path);
+    window.scrollTo(0, 0);
+  };
+
+  const handleBackClick = () => {
+    navigate('/hospedajes');
     window.scrollTo(0, 0);
   };
 
@@ -101,6 +108,10 @@ const HotelDetail = () => {
     <div>
       <Navbar />
       <div className="hotel-detail-container">
+         <div className="back-button" onClick={handleBackClick}>
+          <FaArrowLeft className="back-arrow" /> 
+          <span>Volver</span>
+        </div>
         <div className="hotel-header">
           <div className="hotel-info-header">
             <div className="hotel-title">
