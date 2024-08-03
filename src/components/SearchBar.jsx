@@ -33,6 +33,8 @@ const SearchBar = ({ searchTerm = '', setSearchTerm, filters = {}, setFilters })
   const today = new Date().toISOString().split('T')[0];
 
   return (
+    
+    
     <div className="search-bar">
       <h2 className='search-bar__title'>Filtros</h2>
       <div className="search-bar__date-container">

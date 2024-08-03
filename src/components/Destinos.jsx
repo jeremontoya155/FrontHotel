@@ -13,7 +13,9 @@ const Destinos = () => {
     };
 
     return (
+        
         <div>
+            
             <section className="property-card">
                 <div className="property-highlights">
                     <div className="destinos">
