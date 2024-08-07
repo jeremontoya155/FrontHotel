@@ -63,6 +63,30 @@
   text-decoration: none;
 }
 
+
+.quienes-somos {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.temporarios-nyc1-2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-darkslategray);
+  filter: drop-shadow(1.2px 1.2px 1.2px rgba(74, 74, 74, 0.8));
+  width: 80%;
+}
+.somos-la-opcin-container-2 {
+  width: 80%;
+  margin-top: 1rem;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  font-size: var(--font-size-2xl);
+
+}
+
 .location-names {
   margin-top: 15px;
 }

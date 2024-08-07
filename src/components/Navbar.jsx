@@ -31,17 +31,8 @@ const Navbar = () => {
       <div className={`navigation-wrapper ${menuOpen ? 'open' : ''}`}>
         <div className="navigation"> 
           <Link className="nav-link" to='/' onClick={closeMenu}>INICIO</Link>
-          <Link className="nav-link" to='/hospedajes' onClick={closeMenu}>HOSPEDAJES</Link>
+          <Link className="nav-link" to='/hospedajes' onClick={closeMenu}>ALOJAMIENTOS</Link>
           <Link className="nav-link" to='/nosotros' onClick={closeMenu}>NOSOTROS</Link>
-          <a
-            className="nav-link"
-            href="https://wa.me/5493513509500?text=Hola!%20Estaba%20buscando%20un%20hospedaje%20para..."
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-          >
-            CONTACTO
-          </a>
         </div>
       </div>
     </header>

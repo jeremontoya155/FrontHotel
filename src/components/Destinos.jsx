@@ -153,6 +153,11 @@ const Destinos = () => {
                     <div className="ver-mas">Ver Más</div>
                 </span>
             </div>
+            <div className="quienes-somos">
+                <h2 className="temporarios-nyc1-2">¿Quiénes somos?</h2>
+                <p className='somos-la-opcin-container-2'>Una empresa dedicada a la administración, asesoramiento y gestión de propiedades para alojamiento diario y temporal. <br></br>
+                Temporarios New York fue creado el 1 de Julio de 2023 por Carla Parmigiani y en Marzo 2024 se suma Gastón Fagalde, para complementarnos, y así expandir nuestra red de Alquileres.</p>
+            </div>
         </div>
     );
 };

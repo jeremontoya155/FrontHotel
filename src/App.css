@@ -23,12 +23,15 @@ main {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  border-radius: 30%;
+  background-color: #212121;
+  border-radius: 45%;
   margin: 0;
   padding: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+}
+.whatsapp-button:hover {
+  background-color: var(--color-chocolate);
 }
 
 .whatsapp-button img {
