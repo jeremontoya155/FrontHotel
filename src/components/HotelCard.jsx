@@ -27,9 +27,9 @@ const HotelCard = ({ hotel }) => {
           <li>{hotel.baños === 1 ? "Un baño" : `${hotel.baños} baños`}</li>
         </ul>
         <div className="hotel-card__footer">
-          <div className="hotel-card__price">
+          <div className="hotel-card__price">{/* 
             <div>${hotel.precio}</div>
-            <div className="hotel-card__price-pn">por noche</div>
+            <div className="hotel-card__price-pn">por noche</div> */}
           </div>
           <button className="hotel-card__button">Ver más</button>
         </div>
